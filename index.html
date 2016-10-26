@@ -1,0 +1,27 @@
+<html>
+  <head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script src="js/utils.js"></script>
+    <script src="js/maps.js"></script>
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="css/site.css"/>
+    <script async defer src="https://maps.googleapis.com/maps/api/js?callback=initMap"></script>
+  </head>
+
+  <body>
+
+    <div class="menu">
+
+      <!-- Menu -->
+      <ul class="menu-list">
+      </ul>
+    </div>
+	
+	  <!-- Main body -->
+    <div class="main">
+      <img id="menu-button" src="assets/menu-logo-white.png" onmouseover="this.src='assets/menu-logo-orange.png'" onmouseout="this.src='assets/menu-logo-white.png'" onclick="openMenu();" />
+      <div id="map" onclick="closeMenu();"></div>
+    </div>
+
+  </body>
+</html>
