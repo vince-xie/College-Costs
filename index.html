@@ -1,9 +1,11 @@
 <html>
   <head>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <script src="js/utils.js"></script>
     <script src="js/maps.js"></script>
-    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <script src="js/Chart.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="css/site.css"/>
     <script async defer src="https://maps.googleapis.com/maps/api/js?callback=initMap"></script>
   </head>
@@ -12,15 +14,66 @@
 
     <div class="menu">
 
+      <div class="school">
+        <h2> Rutgers University - New Brunswick </h2>
+      </div>
+
       <!-- Menu -->
       <ul class="menu-list">
+        <h3> Overall </h3>
+        <div class="score">
+          <b>Overall score: </b><font style="color: #27ae60;">87</font>
+        </div>
+        <canvas id="radar-chart" width="400" height="400"></canvas>
+        <h3> About </h3>
+        <div class="location">
+          <b>Location: </b>New Brunswick, NJ
+        </div>
+        <div class="type">
+          <b>Type: </b>Public University
+        </div>
+        <div class="admission-rate">
+          <b>Admission rate: </b>60.9%
+        </div>
+        <div class="retention-rate">
+          <span data-toggle="popover" data-trigger="hover" data-placement="top" data-content="13% higher than the national average">
+            <b>Retention rate: </b><font style="color: #27ae60;">87.9%</font>
+          </span>
+        </div>
+        <div class="graduation-rate">
+          <span data-toggle="popover" data-trigger="hover" data-placement="top" data-content="10% higher than the national average">
+            <b>Graduation rate: </b><font style="color: #27ae60;">79.4%</font>
+          </span>
+        </div>
+        <div class="homepage">
+          <b>Homepage: </b><a href="https://www.rutgers.edu/">https://www.rutgers.edu/</a>
+        </div>
+        <h3> Costs </h3>
+        <div class="in-state-tuition">
+          <span data-toggle="popover" data-trigger="hover" data-placement="top" data-content="12% lower than the national average">
+            <b>In-state tuition and fees: </b><font style="color: #27ae60;">$13,041.45</font>
+          </span>
+        </div>
+        <div class="out-of-state-tuition">
+          <span data-toggle="popover" data-trigger="hover" data-placement="top" data-content="13% lower than the national average">
+            <b>Out-of-state tuition and fees: </b><font style="color: #27ae60;">$23,041.23</font>
+          </span>
+        </div>
+        <div class="average-debt">
+          <span data-toggle="popover" data-trigger="hover" data-placement="top" data-content="8% higher than the national average">
+            <b>Average student debt after graduation: </b><font style="color: #c0392b;">$19,041.23</font>
+          </span>
+        </div>
+        <h3> Statistics </h3>
+        <canvas id="salary-chart" width="400" height="400"></canvas>
+        <canvas id="debt-repayment-chart" width="400" height="400"></canvas>
       </ul>
     </div>
 	
 	  <!-- Main body -->
     <div class="main">
       <img id="menu-button" src="assets/menu-logo-white.png" onmouseover="this.src='assets/menu-logo-orange.png'" onmouseout="this.src='assets/menu-logo-white.png'" onclick="openMenu();" />
-      <div id="map" onclick="closeMenu();"></div>
+      <div id="map"></div>
     </div>
 
   </body>

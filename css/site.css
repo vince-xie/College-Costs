@@ -1,4 +1,4 @@
-body{
+body {
     overflow: hidden;
     margin: 0px;
 }
@@ -8,44 +8,60 @@ body{
     width: 100%;
 }
 
-.menu{
+.menu {
     background-color: #ecf0f1;
     display: inline-block;
     height: 100vh;
-    width: 350px;
+    overflow-y:auto;
+    overflow-x:hidden;
+    width: 410px;
     list-style-type: none;
     font-family: 'Avant Garde', Avantgarde, 'Century Gothic', CenturyGothic, AppleGothic, sans-serif;
-    font-weight: bold;
-    font-size: 1.5em;
+    font-size: 1.0em;
     margin-right: 0px;
     position: relative;
     left: -200px;
 }
 
-li{
+.school {
+    width: 400px;
+    padding:10px;
+    padding-top: 100px;
+    background-color: #2980b9;
+    color: #ecf0f1;
+}
+
+.menu-list h3 {
+    color: #7f8c8d;
+}
+
+canvas {
+    margin-bottom: 20px;
+}
+
+.menu-list > div {
+    margin-left: 15px;
+    margin-top: 10px;
+}
+
+li {
     padding-top: 20px;
 }
 
-a:hover{
+a:hover {
     text-decoration: none;
-    color: #d35400;
 }
 
-.icon-close{
+.icon-close {
     padding-left: 150px;
     padding-top: 17px;
 }
 
-.menu-list{
+.menu-list {
     list-style-type: none;
     padding-left: 10px;
 }
-
-.menu-list li{
-    text-align: center;
-}
-
-.main{
+.main {
     text-align: center;
     width: 100vw;
     height: 100vh;
@@ -55,7 +71,7 @@ a:hover{
     left: 0px;
 }
 
-#menu-button{
+#menu-button {
     float: left;
     border: none;
     margin-top: 10px;
@@ -64,7 +80,7 @@ a:hover{
     min-height: 50px;
 }
 
-.main button{
+.main button {
     margin-right: 20px;
     background-color: #990000;
     color: #FFFFFF;
@@ -75,6 +91,6 @@ a:hover{
     padding: 5px;
 }
 
-.main button:hover{
+.main button:hover {
     background-color: #CC0000;
 }

@@ -1,9 +1,148 @@
+$(document).ready(function(){
+    $('[data-toggle="popover"]').popover(); 
+});
+
 function openMenu(){
     $(".menu").animate({'left': '0px'}, 300);
-    $(".main").animate({'left': '350px'}, 300);
+    $(".main").animate({'left': '410px'}, 300);
+
+	var radarChart = document.getElementById("radar-chart");
+    var data = {
+    	labels: ["Return on investment", "Cost", "Location", "Academics", "Student life"],
+    	datasets: [
+	        {
+	            label: "Individual scores",
+	            backgroundColor: "rgba(255,99,132,0.2)",
+            	borderColor: "rgba(255,99,132,1)",
+            	pointBackgroundColor: "rgba(255,99,132,1)",
+            	pointBorderColor: "#fff",
+            	pointHoverBackgroundColor: "#fff",
+            	pointHoverBorderColor: "rgba(255,99,132,1)",
+	            data: [85, 39, 52, 71, 56]
+	        }
+    	]
+	};
+	var radarChart = new Chart(radarChart, {
+    	type: 'radar',
+    	data: data,
+    	options: {
+    		animation: {
+    			duration: 2500,
+    			easing: 'easeOutCubic'
+    		},
+    		scale: {
+    			ticks: {
+    				display: false,
+                    beginAtZero: true
+                }
+    		}
+    	}
+	});
+
+	var salaryChart = document.getElementById("salary-chart");
+    var data = {
+    	labels: ["10%", "25%", "75%", "90%"],
+    	datasets: 
+    	[
+	        {
+	        	label: 'Salary in USD',
+	            backgroundColor: [
+	                'rgba(255, 99, 132, 0.2)',
+	                'rgba(54, 162, 235, 0.2)',
+	                'rgba(255, 206, 86, 0.2)',
+	                'rgba(75, 192, 192, 0.2)',
+	                'rgba(153, 102, 255, 0.2)',
+	                'rgba(255, 159, 64, 0.2)'
+	            ],
+	            borderColor: [
+	                'rgba(255,99,132,1)',
+	                'rgba(54, 162, 235, 1)',
+	                'rgba(255, 206, 86, 1)',
+	                'rgba(75, 192, 192, 1)',
+	                'rgba(153, 102, 255, 1)',
+	                'rgba(255, 159, 64, 1)'
+	            ],
+	            borderWidth: 1,
+	            data: [12523, 32425, 62432, 85234],
+	        }
+    	]
+	};
+	new Chart(salaryChart, {
+        type: "bar",
+        data: data,
+        options:
+        {
+        	title: {
+            	display: true,
+            	text: 'Salary 6 years after entry by percentile'
+        	},
+        	animation: {
+        		duration: 2500,
+        		easing: 'easeOutCubic'
+        	},
+        	scales: {
+            	yAxes: [{
+                	ticks: {
+                    	beginAtZero:true
+                	}
+            	}]
+        	}
+    	}
+    });
+
+    var repaymentChart = document.getElementById("debt-repayment-chart");
+    var data = {
+    	labels: ["1 year", "3 years", "5 years", "7 years"],
+    	datasets: 
+    	[
+	        {
+	        	label: 'Repayment rate (%)',
+	            backgroundColor: [
+	                'rgba(255, 99, 132, 0.2)',
+	                'rgba(54, 162, 235, 0.2)',
+	                'rgba(255, 206, 86, 0.2)',
+	                'rgba(75, 192, 192, 0.2)',
+	                'rgba(153, 102, 255, 0.2)',
+	                'rgba(255, 159, 64, 0.2)'
+	            ],
+	            borderColor: [
+	                'rgba(255,99,132,1)',
+	                'rgba(54, 162, 235, 1)',
+	                'rgba(255, 206, 86, 1)',
+	                'rgba(75, 192, 192, 1)',
+	                'rgba(153, 102, 255, 1)',
+	                'rgba(255, 159, 64, 1)'
+	            ],
+	            borderWidth: 1,
+	            data: [10, 24, 52, 74],
+	        }
+    	]
+	};
+	new Chart(repaymentChart, {
+        type: "bar",
+        data: data,
+        options:
+        {
+        	title: {
+            	display: true,
+            	text: 'Debt repayment rate after graduation'
+        	},
+        	animation: {
+        		duration: 2500,
+        		easing: 'easeOutCubic'
+        	},
+        	scales: {
+            	yAxes: [{
+                	ticks: {
+                    	beginAtZero:true
+                	}
+            	}]
+        	}
+    	}
+    });
 }
 
 function closeMenu(){
-    $(".menu").animate({'left': '-350px'}, 300);
+    $(".menu").animate({'left': '-410px'}, 300);
     $(".main").animate({'left': '0px'}, 300);
 }
