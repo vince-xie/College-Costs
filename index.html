@@ -1,11 +1,13 @@
 <html>
   <head>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <script src="js/utils.js"></script>
     <script src="js/maps.js"></script>
     <script src="js/Chart.min.js"></script>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
     <link rel="stylesheet" type="text/css" href="css/site.css"/>
     <script async defer src="https://maps.googleapis.com/maps/api/js?callback=initMap"></script>
   </head>
@@ -18,8 +20,8 @@
         <h2> Rutgers University - New Brunswick </h2>
       </div>
 
-      <!-- Menu -->
-      <ul class="menu-list">
+      <!-- Info -->
+      <div class="menu-list">
         <h3> Overall </h3>
         <div class="score">
           <b>Overall score: </b><font style="color: #27ae60;">87</font>
@@ -28,6 +30,9 @@
         <h3> About </h3>
         <div class="location">
           <b>Location: </b>New Brunswick, NJ
+        </div>
+        <div class="type">
+          <b>Locale: </b> Small City (population less than 100,000)
         </div>
         <div class="type">
           <b>Type: </b>Public University
@@ -67,12 +72,15 @@
         <h3> Statistics </h3>
         <canvas id="salary-chart" width="400" height="400"></canvas>
         <canvas id="debt-repayment-chart" width="400" height="400"></canvas>
-      </ul>
+      </div>
     </div>
 	
 	  <!-- Main body -->
     <div class="main">
-      <img id="menu-button" src="assets/menu-logo-white.png" onmouseover="this.src='assets/menu-logo-orange.png'" onmouseout="this.src='assets/menu-logo-white.png'" onclick="openMenu();" />
+      <div id="search-div">
+        <img id="search-button" src="assets/menu-logo-white.png" onmouseover="this.src='assets/menu-logo-orange.png'" onmouseout="this.src='assets/menu-logo-white.png'" onclick="toggleSearch();" />
+        <input id="search" placeholder="Search">
+      </div>
       <div id="map"></div>
     </div>
 

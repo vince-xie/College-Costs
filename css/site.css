@@ -19,8 +19,6 @@ body {
     font-family: 'Avant Garde', Avantgarde, 'Century Gothic', CenturyGothic, AppleGothic, sans-serif;
     font-size: 1.0em;
     margin-right: 0px;
-    position: relative;
-    left: -200px;
 }
 
 .school {
@@ -44,10 +42,6 @@ canvas {
     margin-top: 10px;
 }
 
-li {
-    padding-top: 20px;
-}
-
 a:hover {
     text-decoration: none;
 }
@@ -61,6 +55,25 @@ a:hover {
     list-style-type: none;
     padding-left: 10px;
 }
+
+#search-div {
+    float: right;
+}
+
+#search {
+    background: none;
+    border: none;
+    color: #ecf0f1;
+    height: 7%;
+    min-height: 50px;
+    margin: 10px 20px 15px 10px;
+    font-size: 18;
+    width: 0px;
+    outline: none;
+    border-bottom: 3px solid #ecf0f1;
+    padding: 10px 0px 0px 0px;
+}
+
 .main {
     text-align: center;
     width: 100vw;
@@ -69,14 +82,33 @@ a:hover {
     display: inline-block;
     position: absolute;
     left: 0px;
+    min-width: 650px;
 }
 
 #menu-button {
     float: left;
     border: none;
-    margin-top: 10px;
+    margin: 10px 0px 15px 15px;
     height: 7%;
-    margin-bottom: 15px;
+    min-height: 50px;
+}
+
+.ui-menu {
+    background-color: white;
+    max-height: 40vh;
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+
+.ui-menu-item {
+    padding: 5px 0px 5px 0px;
+    color: #3498db;
+}
+
+#search-button {
+    border: none;
+    margin: 10px 0px 15px 0px;
+    height: 7%;
     min-height: 50px;
 }
 

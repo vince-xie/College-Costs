@@ -1,14 +1,12 @@
-$(document).ready(function(){
-    $('[data-toggle="popover"]').popover(); 
+$(document).ready(function() {
+    $('[data-toggle="popover"]').popover();
+    setUpSearch();
 });
 
-function openMenu(){
-    $(".menu").animate({'left': '0px'}, 300);
-    $(".main").animate({'left': '410px'}, 300);
-
+function openMenu() {
 	var radarChart = document.getElementById("radar-chart");
     var data = {
-    	labels: ["Return on investment", "Cost", "Location", "Academics", "Student life"],
+    	labels: ["Return on investment", "Cost", "Location", "Graduation Rate", "Retention Rate"],
     	datasets: [
 	        {
 	            label: "Individual scores",
@@ -140,9 +138,51 @@ function openMenu(){
         	}
     	}
     });
+
+    $(".main").animate({'left': '410px'}, 300);
 }
 
-function closeMenu(){
-    $(".menu").animate({'left': '-410px'}, 300);
+function setUpSearch() {
+    var schools = [
+      "Rutgers University - New Brunswick",
+      "Princeton University",
+      "Harvard University",
+      "Stanford University",
+      "University of Chicago"
+    ];
+    $("#search").autocomplete({
+        source: schools,
+        select: function (e, ui) {
+            var chicago = {lat: 41.85, lng: -87.65};
+            window.map.panTo(chicago);
+            if(window.marker != null) {
+                window.marker.setMap(null);
+            }
+            window.marker = new google.maps.Marker({
+                position: chicago,
+                map: map
+            });
+            google.maps.event.addListener(marker, 'click', function(e) {
+                openMenu();
+            });
+        }
+    })
+    $("#search").focus(function () {
+        $(this).autocomplete("search", this.value);
+    });
+}
+
+function closeMenu() {
     $(".main").animate({'left': '0px'}, 300);
+}
+
+function toggleSearch() {
+    var search = $("#search");
+    if($("#search").css('width') != "0px") {
+        search.animate({'width': '0px'}, 500);
+    } else {
+        search.animate({'width': '300px'}, 500, function() {
+            search.focus();
+        });
+    }
 }
