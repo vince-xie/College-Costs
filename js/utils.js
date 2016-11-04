@@ -153,8 +153,8 @@ function setUpSearch() {
     $("#search").autocomplete({
         source: schools,
         select: function (e, ui) {
+            $("#search").blur();
             var chicago = {lat: 41.85, lng: -87.65};
-            window.map.panTo(chicago);
             if(window.marker != null) {
                 window.marker.setMap(null);
             }
@@ -162,6 +162,8 @@ function setUpSearch() {
                 position: chicago,
                 map: map
             });
+            window.map.panTo(chicago);
+            window.map.setZoom(12);
             google.maps.event.addListener(marker, 'click', function(e) {
                 openMenu();
             });
