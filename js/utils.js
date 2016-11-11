@@ -1,7 +1,32 @@
 $(document).ready(function() {
     $('[data-toggle="popover"]').popover();
-    setUpSearch();
+    getSchoolList();
 });
+
+function getSchoolList() {
+    $.ajax({
+        dataType: "JSON",
+        type: 'post',
+        url: "php/QuerySchoolList.php",
+        success: function(result) {
+            setUpSearch(result);
+        }
+    });
+}
+
+function getSchoolInfo(name) {
+    $.ajax({
+        dataType: "JSON",
+        type: 'post',
+        url: "php/QuerySchool.php",
+        data: {
+            name: name
+        },
+        success: function(result) {
+            alert(result);
+        }
+    });
+}
 
 function openMenu() {
 	var radarChart = document.getElementById("radar-chart");
@@ -142,18 +167,12 @@ function openMenu() {
     $(".main").animate({'left': '410px'}, 300);
 }
 
-function setUpSearch() {
-    var schools = [
-      "Rutgers University - New Brunswick",
-      "Princeton University",
-      "Harvard University",
-      "Stanford University",
-      "University of Chicago"
-    ];
+function setUpSearch(schools) {
     $("#search").autocomplete({
         source: schools,
         select: function (e, ui) {
             $("#search").blur();
+            var schoolInfo = getSchoolInfo(ui.item.value);
             var chicago = {lat: 41.85, lng: -87.65};
             if(window.marker != null) {
                 window.marker.setMap(null);
