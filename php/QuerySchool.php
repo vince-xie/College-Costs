@@ -13,7 +13,7 @@ if ($db_connection->connect_error) {
 }
 
 $name = $_POST['name'];
-$query = "SELECT * FROM schools";
+$query = "SELECT * FROM schools WHERE name = '" . $name . "'";
 
 if ($db_connection) {
     $result = $db_connection->query($query);

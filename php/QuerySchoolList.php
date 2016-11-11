@@ -12,7 +12,7 @@ if ($db_connection->connect_error) {
     die("Connection to MySQL database failed.");
 }
 
-$query = "SELECT name FROM schools LIMIT 1000;";
+$query = "SELECT name FROM schools;";
 
 if ($db_connection) {
     $result = $db_connection->query($query);

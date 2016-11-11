@@ -22,8 +22,21 @@ function getSchoolInfo(name) {
         data: {
             name: name
         },
-        success: function(result) {
-            alert(result);
+        success: function(school) {
+            var location = {lat: parseFloat(school.latitude), 
+                lng: parseFloat(school.longitude)};
+            if(window.marker != null) {
+                window.marker.setMap(null);
+            }
+            window.marker = new google.maps.Marker({
+                position: location,
+                map: map
+            });
+            window.map.panTo(location);
+            window.map.setZoom(12);
+            google.maps.event.addListener(marker, 'click', function(e) {
+                openMenu();
+            });
         }
     });
 }
@@ -169,23 +182,12 @@ function openMenu() {
 
 function setUpSearch(schools) {
     $("#search").autocomplete({
-        source: schools,
+        source: function(request, response) {
+            response($.ui.autocomplete.filter(schools, request.term).slice(0, 100));
+        },
         select: function (e, ui) {
             $("#search").blur();
             var schoolInfo = getSchoolInfo(ui.item.value);
-            var chicago = {lat: 41.85, lng: -87.65};
-            if(window.marker != null) {
-                window.marker.setMap(null);
-            }
-            window.marker = new google.maps.Marker({
-                position: chicago,
-                map: map
-            });
-            window.map.panTo(chicago);
-            window.map.setZoom(12);
-            google.maps.event.addListener(marker, 'click', function(e) {
-                openMenu();
-            });
         }
     })
     $("#search").focus(function () {
@@ -204,6 +206,7 @@ function toggleSearch() {
     } else {
         search.animate({'width': '300px'}, 500, function() {
             search.focus();
+            search.select();
         });
     }
 }
