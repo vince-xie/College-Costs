@@ -3,17 +3,21 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-route.js"></script>
     <script src="js/utils.js"></script>
     <script src="js/site.js"></script>
     <script src="js/maps.js"></script>
     <script src="js/Chart.min.js"></script>
+    <script src="js/app.js"></script>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
     <link rel="stylesheet" type="text/css" href="css/site.css"/>
     <script async defer src="https://maps.googleapis.com/maps/api/js?callback=initMap"></script>
+    <base href="/">
   </head>
 
-  <body>
+  <body ng-app="project">
 
     <div class="info">
 
@@ -83,15 +87,25 @@
         </div>
       </div>
     </div>
-	
-	  <!-- Main -->
+
+    <!-- Main -->
     <div class="main">
-      <button class="browse-button" onclick="closeInfo();openMenu();">Browse</button>
+      <button class="browse-button" onclick="closeInfo();" style="display: none;">
+        <a class="browse-link" href="/browse">
+          Browse
+        </a>
+      </button>
+      <button class="back-button" onclick="closeInfo();" style="display: none;">
+        <a class="back-link" href="/">
+          Back
+        </a>
+      </button>
       <div id="search-div">
         <button class="search-button" onclick="toggleSearch();">Search</button>
         <input id="search">
       </div>
       <div id="map"></div>
+      <ng-view></ng-view>
     </div>
 
   </body>

@@ -242,6 +242,9 @@ function setUpSearch(schools) {
         },
         select: function (e, ui) {
             $("#search").blur();
+            if (window.location.toString().includes("browse")) {
+                window.location = '/?name=' + ui.item.value;
+            }
             var schoolInfo = getSchoolInfo(ui.item.value);
         }
     })
@@ -263,5 +266,14 @@ function toggleSearch() {
             search.focus();
             search.select();
         });
+    }
+}
+
+function toggleSearchWithoutSelect() {
+    var search = $("#search");
+    if($("#search").css('width') != "0px") {
+        search.css('width', '0px');
+    } else {
+        search.css('width', '300px');
     }
 }

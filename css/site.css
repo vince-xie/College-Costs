@@ -69,7 +69,7 @@ a:hover {
     border: none;
     color: #ecf0f1;
     height: 7%;
-    min-height: 50px;
+    height: 50px;
     margin: 10px 20px 15px 10px;
     font-size: 18;
     width: 0px;
@@ -101,13 +101,16 @@ a:hover {
     color: #3498db;
 }
 
-.browse-button {
+.browse-button, .back-button {
     border: none;
     margin: 10px 0px 15px 15px;
     height: 7%;
-    min-height: 50px;
+    height: 50px;
     float: left;
     background-color: transparent;
+}
+
+.browse-button a, .back-button a {
     color: #ecf0f1;
     font-size: 2em;
     border: none;
@@ -117,7 +120,7 @@ a:hover {
 
 .search-button {
     height: 7%;
-    min-height: 50px;
+    height: 50px;
     background-color: transparent;
     color: #ecf0f1;
     font-size: 2em;
@@ -126,7 +129,7 @@ a:hover {
     padding: 5px;
 }
 
-.search-button:hover .browse-button:hover {
+.search-button:hover, .browse-link:hover, .back-link:hover {
     color: #FFFFFF;
 }
 
