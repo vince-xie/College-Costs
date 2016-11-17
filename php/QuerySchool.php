@@ -8,18 +8,27 @@ if ($db_connection->connect_error) {
 }
 
 $name = $_POST['name'];
-$query = "SELECT * FROM schools WHERE name = '" . $name . "'";
-$state_query = "SELECT * FROM located, states WHERE located.school = '" . $name . "' AND located.state_code = states.code;";
-
 if ($db_connection) {
-    $result = $db_connection->query($query);
-    $state_result = $db_connection->query($state_query);
-    if ($result->num_rows > 0 && $state_result->num_rows > 0) {
+    $query = $db_connection->prepare("SELECT * FROM schools WHERE name = ?");
+    $query->bind_param("s", $name);
+    
+    $query->execute();
+    $result = $query->get_result();
+    if ($result->num_rows > 0) {
         $row = $result->fetch_assoc();
-        $state = $state_result->fetch_assoc();
-        $row['state'] = $state['name'];
-        $row['state_salary'] = $state['avg_salary'];
-        echo json_encode($row);
-    } 
+        $query->close();
+        $state_query = $db_connection->prepare("SELECT * FROM located, states WHERE located.school = ? AND located.state_code = states.code;");
+        $state_query->bind_param('s', $name);
+        $state_query->execute();
+        $state_result = $state_query->get_result();
+        if ($state_result->num_rows > 0) {
+            $state = $state_result->fetch_assoc();
+            $row['state'] = $state['name'];
+            $row['state_salary'] = $state['avg_salary'];
+            $state_query->close();
+        }
+        echo json_encode($row); 
+    }
+    $db_connection->close();
 }
 ?>

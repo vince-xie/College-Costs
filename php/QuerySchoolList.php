@@ -19,4 +19,5 @@ if ($db_connection) {
     }
 }
 echo json_encode($array);
+$db_connection->close();
 ?>
