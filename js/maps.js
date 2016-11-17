@@ -5,6 +5,6 @@ function initMap() {
     	center: usa
   	});
     google.maps.event.addListener(map, 'click', function(e) {
-        closeMenu();
+        closeInfo();
     });
 }

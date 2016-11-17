@@ -1,0 +1,819 @@
+"school","state_code"
+"University of Alabama at Birmingham",1
+"The University of Alabama",1
+"Auburn University",1
+"Birmingham Southern College",1
+"Samford University",1
+"Spring Hill College",1
+"Arizona State University-Tempe",4
+"University of Arizona",4
+"Embry-Riddle Aeronautical University-Prescott",4
+"University of Arkansas",5
+"Harding University",5
+"Hendrix College",5
+"John Brown University",5
+"Ouachita Baptist University",5
+"Art Center College of Design",6
+"Azusa Pacific University",6
+"Biola University",6
+"California Baptist University",6
+"California College of the Arts",6
+"California Lutheran University",6
+"California Polytechnic State University-San Luis Obispo",6
+"California State University-Stanislaus",6
+"California State Polytechnic University-Pomona",6
+"California State University-Chico",6
+"California State University-Fullerton",6
+"California State University-Long Beach",6
+"University of California-Berkeley",6
+"University of California-Davis",6
+"University of California-Irvine",6
+"University of California-Los Angeles",6
+"University of California-Riverside",6
+"University of California-San Diego",6
+"University of California-Santa Barbara",6
+"University of California-Santa Cruz",6
+"California Institute of the Arts",6
+"California Maritime Academy",6
+"Chapman University",6
+"Concordia University-Irvine",6
+"Dominican University of California",6
+"Fashion Institute of Design & Merchandising-Los Angeles",6
+"Fashion Institute of Design & Merchandising-San Francisco",6
+"Fresno Pacific University",6
+"Life Pacific College",6
+"University of La Verne",6
+"Laguna College of Art and Design",6
+"The Master's College and Seminary",6
+"Loyola Marymount University",6
+"Mills College",6
+"Mount St Mary's College",6
+"Occidental College",6
+"Otis College of Art and Design",6
+"University of the Pacific",6
+"Pepperdine University",6
+"Pitzer College",6
+"Point Loma Nazarene University",6
+"University of Redlands",6
+"San Diego State University",6
+"University of San Diego",6
+"University of San Francisco",6
+"William Jessup University",6
+"Santa Clara University",6
+"Saint Mary's College of California",6
+"Sonoma State University",6
+"Vanguard University of Southern California",6
+"University of Southern California",6
+"Whittier College",6
+"University of Colorado Boulder",8
+"Colorado School of Mines",8
+"Colorado State University-Fort Collins",8
+"University of Denver",8
+"Regis University",8
+"Albertus Magnus College",9
+"Central Connecticut State University",9
+"Connecticut College",9
+"University of Connecticut",9
+"Eastern Connecticut State University",9
+"Fairfield University",9
+"University of Hartford",9
+"University of New Haven",9
+"Quinnipiac University",9
+"Sacred Heart University",9
+"University of Saint Joseph",9
+"St Vincent's College",9
+"Trinity College",9
+"Wesleyan University",9
+"Yale University",9
+"University of Delaware",10
+"American University",11
+"Catholic University of America",11
+"Corcoran College of Art and Design",11
+"George Washington University",11
+"Georgetown University",11
+"Howard University",11
+"Bethune-Cookman University",12
+"University of Central Florida",12
+"Clearwater Christian College",12
+"Eckerd College",12
+"Embry-Riddle Aeronautical University-Daytona Beach",12
+"Flagler College-St Augustine",12
+"Florida Institute of Technology",12
+"Florida International University",12
+"Florida Southern College",12
+"Florida State University",12
+"University of Florida",12
+"Keiser University-Ft Lauderdale",12
+"University of Miami",12
+"Ringling College of Art and Design",12
+"Rollins College",12
+"University of South Florida-Main Campus",12
+"Stetson University",12
+"The University of Tampa",12
+"Agnes Scott College",13
+"Berry College",13
+"Covenant College",13
+"Emory University",13
+"Georgia Institute of Technology-Main Campus",13
+"Georgia College and State University",13
+"Georgia Southern University",13
+"Georgia State University",13
+"University of Georgia",13
+"Mercer University",13
+"Morehouse College",13
+"Oglethorpe University",13
+"Savannah College of Art and Design",13
+"Spelman College",13
+"Wesleyan College",13
+"University of Hawaii at Manoa",15
+"University of Idaho",16
+"The College of Idaho",16
+"Brigham Young University-Idaho",16
+"School of the Art Institute of Chicago",17
+"Augustana College",17
+"Aurora University",17
+"Bradley University",17
+"University of Chicago",17
+"Concordia University-Chicago",17
+"DePaul University",17
+"Eastern Illinois University",17
+"Elmhurst College",17
+"Eureka College",17
+"Greenville College",17
+"University of Illinois at Chicago",17
+"Benedictine University",17
+"University of Illinois at Urbana-Champaign",17
+"Illinois Wesleyan University",17
+"Illinois College",17
+"Illinois Institute of Technology",17
+"Illinois State University",17
+"Judson University",17
+"Knox College",17
+"Lake Forest College",17
+"Lewis University",17
+"Loyola University Chicago",17
+"Millikin University",17
+"Monmouth College",17
+"North Central College",17
+"North Park University",17
+"Northern Illinois University",17
+"Northwestern University",17
+"Olivet Nazarene University",17
+"Quincy University",17
+"Dominican University",17
+"University of St Francis",17
+"Southern Illinois University-Edwardsville",17
+"Trinity Christian College",17
+"Western Illinois University",17
+"Wheaton College",17
+"Anderson University",18
+"Ball State University",18
+"Bethel College-Indiana",18
+"Butler University",18
+"DePauw University",18
+"Earlham College",18
+"University of Evansville",18
+"Franklin College",18
+"Goshen College",18
+"Grace College and Theological Seminary",18
+"Hanover College",18
+"Huntington University",18
+"University of Indianapolis",18
+"Indiana University-Bloomington",18
+"International Business College-Fort Wayne",18
+"Marian University",18
+"Marian University",18
+"Indiana Wesleyan University",18
+"University of Notre Dame",18
+"Oakland City University",18
+"Rose-Hulman Institute of Technology",18
+"University of Saint Francis-Fort Wayne",18
+"Saint Mary-of-the-Woods College",18
+"Saint Mary's College",18
+"Taylor University",18
+"Trine University",18
+"Valparaiso University",18
+"Buena Vista University",19
+"Central College",19
+"Clarke University",19
+"Coe College",19
+"Cornell College",19
+"Dordt College",19
+"Drake University",19
+"Grinnell College",19
+"Iowa State University",19
+"University of Iowa",19
+"Loras College",19
+"Luther College",19
+"Morningside College",19
+"Mount Mercy University",19
+"University of Northern Iowa",19
+"Northwestern College",19
+"Saint Ambrose University",19
+"Simpson College",19
+"Wartburg College",19
+"Baker University",20
+"Benedictine College",20
+"Bethel College-North Newton",20
+"Central Christian College of Kansas",20
+"University of Kansas",20
+"Newman University",20
+"Kansas State University",20
+"MidAmerica Nazarene University",20
+"Pittsburg State University",20
+"University of Saint Mary",20
+"Tabor College",20
+"Asbury University",21
+"Bellarmine University",21
+"Berea College",21
+"Georgetown College",21
+"University of Kentucky",21
+"University of Louisville",21
+"Midway College",21
+"Murray State University",21
+"Thomas More College",21
+"Transylvania University",21
+"Centenary College of Louisiana",22
+"Louisiana State University and Agricultural & Mechanical College",22
+"Loyola University New Orleans",22
+"Tulane University of Louisiana",22
+"Colby College",23
+"University of Maine at Farmington",23
+"University of Maine",23
+"Maine Maritime Academy",23
+"University of New England",23
+"Saint Joseph's College of Maine",23
+"Unity College",23
+"Goucher College",24
+"Hood College",24
+"Johns Hopkins University",24
+"Loyola University Maryland",24
+"University of Maryland-Baltimore County",24
+"University of Maryland-College Park",24
+"Maryland Institute College of Art",24
+"Mount St Mary's University",24
+"Notre Dame of Maryland University",24
+"Salisbury University",24
+"St Mary's College of Maryland",24
+"St John's College",24
+"Towson University",24
+"Stevenson University",24
+"Washington College",24
+"McDaniel College",24
+"Assumption College",25
+"Bay Path College",25
+"Bentley University",25
+"Boston College",25
+"The Boston Conservatory",25
+"Boston University",25
+"Brandeis University",25
+"Bridgewater State University",25
+"Clark University",25
+"Eastern Nazarene College",25
+"Emerson College",25
+"Endicott College",25
+"Fitchburg State University",25
+"Framingham State University",25
+"Gordon College",25
+"Hampshire College",25
+"Harvard University",25
+"College of the Holy Cross",25
+"Lasell College",25
+"University of Massachusetts-Lowell",25
+"University of Massachusetts-Amherst",25
+"MCPHS University",25
+"Massachusetts College of Art and Design",25
+"Massachusetts Institute of Technology",25
+"Massachusetts Maritime Academy",25
+"Merrimack College",25
+"Mount Holyoke College",25
+"School of the Museum of Fine Arts-Boston",25
+"Massachusetts College of Liberal Arts",25
+"Northeastern University",25
+"College of Our Lady of the Elms",25
+"Simmons College",25
+"Smith College",25
+"Springfield College",25
+"Stonehill College",25
+"Suffolk University",25
+"Tufts University",25
+"Wentworth Institute of Technology",25
+"Wentworth Institute of Technology",25
+"Wentworth Institute of Technology",25
+"Wentworth Institute of Technology",25
+"Western New England University",25
+"Westfield State University",25
+"Wheaton College",25
+"Wheelock College",25
+"Worcester Polytechnic Institute",25
+"Adrian College",26
+"Albion College",26
+"Alma College",26
+"Andrews University",26
+"Aquinas College",26
+"Calvin College",26
+"Central Michigan University",26
+"College for Creative Studies",26
+"University of Detroit Mercy",26
+"Kettering University",26
+"Grand Valley State University",26
+"Hope College",26
+"Kalamazoo College",26
+"University of Michigan-Ann Arbor",26
+"Michigan State University",26
+"Michigan Technological University",26
+"University of Michigan-Dearborn",26
+"Northwood University-Michigan",26
+"Spring Arbor University",26
+"Western Michigan University",26
+"Augsburg College",27
+"Bethel University",27
+"Concordia College at Moorhead",27
+"Gustavus Adolphus College",27
+"Hamline University",27
+"University of Minnesota-Twin Cities",27
+"Minneapolis College of Art and Design",27
+"Herzing University-Minneapolis",27
+"University of Minnesota-Duluth",27
+"University of Minnesota-Morris",27
+"University of Northwestern-St Paul",27
+"Oak Hills Christian College",27
+"Saint Mary's University of Minnesota",27
+"St Olaf College",27
+"Crown College",27
+"The College of Saint Scholastica",27
+"University of St Thomas",27
+"St Catherine University",27
+"Winona State University",27
+"Millsaps College",28
+"University of Mississippi",28
+"Mississippi College",28
+"Mississippi State University",28
+"William Carey University",28
+"Cox College",29
+"University of Central Missouri",29
+"Cottey College",29
+"Drury University",29
+"Evangel University",29
+"Hannibal-LaGrange University",29
+"Kansas City Art Institute",29
+"Maryville University of Saint Louis",29
+"University of Missouri-Columbia",29
+"University of Missouri-Kansas City",29
+"Missouri University of Science and Technology",29
+"Truman State University",29
+"Northwest Missouri State University",29
+"Rockhurst University",29
+"Saint Louis University",29
+"Southwest Baptist University",29
+"Stephens College",29
+"Missouri State University-Springfield",29
+"Washington University in St Louis",29
+"Webster University",29
+"Westminster College",29
+"William Jewell College",29
+"William Woods University",29
+"Carroll College",30
+"Concordia University-Nebraska",31
+"Creighton University",31
+"Doane College-Crete",31
+"Grace University",31
+"Hastings College",31
+"University of Nebraska at Kearney",31
+"Nebraska Methodist College of Nursing & Allied Health",31
+"Nebraska Wesleyan University",31
+"University of Nebraska-Lincoln",31
+"University of Nevada-Reno",32
+"Colby-Sawyer College",33
+"Daniel Webster College",33
+"Dartmouth College",33
+"Southern New Hampshire University",33
+"University of New Hampshire-Main Campus",33
+"Keene State College",33
+"Plymouth State University",33
+"Rivier University",33
+"Saint Anselm College",33
+"Caldwell College",34
+"Centenary College",34
+"Drew University",34
+"Fairleigh Dickinson University-College at Florham",34
+"Georgian Court University",34
+"Rowan University",34
+"Monmouth University",34
+"Montclair State University",34
+"New Jersey Institute of Technology",34
+"Princeton University",34
+"Ramapo College of New Jersey",34
+"Rider University",34
+"Rutgers University-Camden",34
+"Rutgers University-New Brunswick",34
+"Rutgers University-Newark",34
+"Saint Peter's University",34
+"Seton Hall University",34
+"College of Saint Elizabeth",34
+"Stevens Institute of Technology",34
+"The Richard Stockton College of New Jersey",34
+"The College of New Jersey",34
+"William Paterson University of New Jersey",34
+"Adelphi University",36
+"Alfred University",36
+"American Musical and Dramatic Academy",36
+"Bard College",36
+"Canisius College",36
+"Cazenovia College",36
+"Clarkson University",36
+"Columbia University in the City of New York",36
+"Cooper Union for the Advancement of Science and Art",36
+"Cornell University",36
+"CUNY Bernard M Baruch College",36
+"CUNY Brooklyn College",36
+"CUNY Hunter College",36
+"CUNY Queens College",36
+"Elmira College",36
+"Fashion Institute of Technology",36
+"Fordham University",36
+"Hamilton College",36
+"Hartwick College",36
+"Hobart William Smith Colleges",36
+"Hofstra University",36
+"Houghton College",36
+"Iona College",36
+"Ithaca College",36
+"Le Moyne College",36
+"Manhattan College",36
+"Manhattanville College",36
+"Marist College",36
+"Molloy College",36
+"Monroe College",36
+"Mount Saint Mary College",36
+"College of Mount Saint Vincent",36
+"Nazareth College",36
+"The New School",36
+"New York University",36
+"Niagara University",36
+"New York School of Interior Design",36
+"Pace University-New York",36
+"Polytechnic Institute of New York University",36
+"Pratt Institute-Main",36
+"Rensselaer Polytechnic Institute",36
+"Roberts Wesleyan College",36
+"Rochester Institute of Technology",36
+"University of Rochester",36
+"The Sage Colleges",36
+"St Bonaventure University",36
+"St Francis College",36
+"St Lawrence University",36
+"The College of Saint Rose",36
+"St Thomas Aquinas College",36
+"Sarah Lawrence College",36
+"Siena College",36
+"Skidmore College",36
+"Saint Joseph's College-New York",36
+"Saint John Fisher College",36
+"St John's University-New York",36
+"SUNY at Albany",36
+"SUNY at Binghamton",36
+"University at Buffalo",36
+"Stony Brook University",36
+"SUNY College of Environmental Science and Forestry",36
+"SUNY College at Brockport",36
+"SUNY College at Cortland",36
+"SUNY at Fredonia",36
+"SUNY College at Geneseo",36
+"State University of New York at New Paltz",36
+"SUNY Oneonta",36
+"SUNY College at Oswego",36
+"SUNY College at Potsdam",36
+"SUNY at Purchase College",36
+"SUNY College at Plattsburgh",36
+"SUNY Maritime College",36
+"Syracuse University",36
+"Vassar College",36
+"School of Visual Arts",36
+"Wagner College",36
+"Wells College",36
+"Yeshiva University",36
+"Appalachian State University",37
+"Catawba College",37
+"Duke University",37
+"East Carolina University",37
+"Elon University",37
+"Gardner-Webb University",37
+"Guilford College",37
+"High Point University",37
+"Meredith College",37
+"University of North Carolina at Asheville",37
+"University of North Carolina at Chapel Hill",37
+"University of North Carolina at Charlotte",37
+"University of North Carolina at Greensboro",37
+"University of North Carolina School of the Arts",37
+"North Carolina State University at Raleigh",37
+"University of North Carolina Wilmington",37
+"Queens University of Charlotte",37
+"Salem College",37
+"Wake Forest University",37
+"Warren Wilson College",37
+"Wingate University",37
+"Western Carolina University",37
+"University of Jamestown",38
+"University of North Dakota",38
+"North Dakota State University-Main Campus",38
+"Ashland University",39
+"Baldwin Wallace University",39
+"Bluffton University",39
+"Bowling Green State University-Main Campus",39
+"Capital University",39
+"Case Western Reserve University",39
+"Cedarville University",39
+"University of Cincinnati-Main Campus",39
+"Cleveland Institute of Art",39
+"Columbus College of Art and Design",39
+"University of Dayton",39
+"Denison University",39
+"The University of Findlay",39
+"Hiram College",39
+"John Carroll University",39
+"Kent State University at Kent",39
+"Kettering College",39
+"Malone University",39
+"Marietta College",39
+"Mercy College of Ohio",39
+"Miami University-Oxford",39
+"Mount Carmel College of Nursing",39
+"University of Mount Union",39
+"Mount Vernon Nazarene University",39
+"College of Mount St Joseph",39
+"Oberlin College",39
+"Ohio Northern University",39
+"Ohio State University-Main Campus",39
+"Ohio University-Main Campus",39
+"Ohio Wesleyan University",39
+"Otterbein University",39
+"Franciscan University of Steubenville",39
+"Ursuline College",39
+"Walsh University",39
+"Wittenberg University",39
+"The College of Wooster",39
+"Xavier University",39
+"Oklahoma Wesleyan University",40
+"Hillsdale Free Will Baptist College",40
+"Oklahoma State University-Main Campus",40
+"Oklahoma Baptist University",40
+"Oklahoma City University",40
+"University of Oklahoma-Norman Campus",40
+"Oral Roberts University",40
+"University of Tulsa",40
+"Concordia University-Portland",41
+"George Fox University",41
+"Lewis & Clark College",41
+"Linfield College-McMinnville Campus",41
+"Oregon State University",41
+"University of Oregon",41
+"Pacific University",41
+"University of Portland",41
+"Reed College",41
+"Corban University",41
+"Willamette University",41
+"Albright College",42
+"Allegheny College",42
+"DeSales University",42
+"Alvernia University",42
+"Arcadia University",42
+"Bloomsburg University of Pennsylvania",42
+"Bryn Mawr College",42
+"Carlow University",42
+"Carnegie Mellon University",42
+"Cedar Crest College",42
+"Chatham University",42
+"Clarion University of Pennsylvania",42
+"Delaware Valley College",42
+"Dickinson College",42
+"Drexel University",42
+"Duquesne University",42
+"East Stroudsburg University of Pennsylvania",42
+"Eastern University",42
+"Elizabethtown College",42
+"Franklin and Marshall College",42
+"Gannon University",42
+"Geneva College",42
+"Gettysburg College",42
+"Gwynedd Mercy University",42
+"Holy Family University",42
+"Indiana University of Pennsylvania-Main Campus",42
+"Juniata College",42
+"King's College",42
+"Kutztown University of Pennsylvania",42
+"La Salle University",42
+"Lancaster Bible College",42
+"Lebanon Valley College",42
+"Lehigh University",42
+"Lycoming College",42
+"Marywood University",42
+"Mercyhurst University",42
+"Messiah College",42
+"Millersville University of Pennsylvania",42
+"Misericordia University",42
+"Moore College of Art and Design",42
+"Moravian College",42
+"Muhlenberg College",42
+"Neumann University",42
+"Pennsylvania State University-Penn State Erie-Behrend College",42
+"Pennsylvania State University-Penn State New Kensington",42
+"Pennsylvania State University-Penn State Wilkes-Barre",42
+"Pennsylvania State University-Penn State Lehigh Valley",42
+"Pennsylvania State University-Penn State Altoona",42
+"Pennsylvania State University-Penn State Berks",42
+"Pennsylvania State University-Penn State Harrisburg",42
+"Pennsylvania State University-Penn State Dubois",42
+"Pennsylvania State University-Penn State Hazleton",42
+"Pennsylvania State University-Main Campus",42
+"Pennsylvania State University-Penn State Mont Alto",42
+"Pennsylvania College of Art and Design",42
+"University of Pennsylvania",42
+"Philadelphia University",42
+"The University of the Arts",42
+"Cairn University-Langhorne",42
+"University of the Sciences",42
+"University of Pittsburgh-Bradford",42
+"University of Pittsburgh-Greensburg",42
+"University of Pittsburgh-Johnstown",42
+"University of Pittsburgh-Pittsburgh Campus",42
+"Robert Morris University",42
+"Saint Joseph's University",42
+"Saint Vincent College",42
+"University of Scranton",42
+"Seton Hill University",42
+"Shippensburg University of Pennsylvania",42
+"Slippery Rock University of Pennsylvania",42
+"Susquehanna University",42
+"Temple University",42
+"Ursinus College",42
+"Villanova University",42
+"Washington & Jefferson College",42
+"Waynesburg University",42
+"West Chester University of Pennsylvania",42
+"Westminster College",42
+"Widener University-Main Campus",42
+"Wilkes University",42
+"Wilson College",42
+"York College Pennsylvania",42
+"Brown University",44
+"Bryant University",44
+"Johnson & Wales University-Providence",44
+"Providence College",44
+"University of Rhode Island",44
+"Rhode Island School of Design",44
+"Roger Williams University",44
+"Salve Regina University",44
+"Anderson University",45
+"College of Charleston",45
+"Citadel Military College of South Carolina",45
+"Clemson University",45
+"Columbia International University",45
+"Converse College",45
+"Erskine College",45
+"Furman University",45
+"Lander University",45
+"North Greenville University",45
+"Presbyterian College",45
+"University of South Carolina-Columbia",45
+"Winthrop University",45
+"Augustana College",46
+"Mount Marty College",46
+"South Dakota State University",46
+"University of South Dakota",46
+"Aquinas College",47
+"Belmont University",47
+"Bethel University",47
+"Bryan College-Dayton",47
+"Christian Brothers University",47
+"Lipscomb University",47
+"Fisk University",47
+"Freed-Hardeman University",47
+"Johnson University",47
+"King University",47
+"Lee University",47
+"Lincoln Memorial University",47
+"Maryville College",47
+"Milligan College",47
+"Rhodes College",47
+"Sewanee-The University of the South",47
+"Southern Adventist University",47
+"The University of Tennessee-Knoxville",47
+"Tennessee Technological University",47
+"Union University",47
+"Vanderbilt University",47
+"Abilene Christian University",48
+"Austin College",48
+"Baylor University",48
+"Remington College-Dallas Campus",48
+"Dallas Baptist University",48
+"University of Dallas",48
+"Hardin-Simmons University",48
+"LeTourneau University",48
+"Rice University",48
+"Saint Edward's University",48
+"University of St Thomas",48
+"Sam Houston State University",48
+"St Mary's University",48
+"Southern Methodist University",48
+"Southwestern University",48
+"Texas State University",48
+"Texas A & M University-College Station",48
+"The University of Texas at Austin",48
+"The University of Texas at Dallas",48
+"Texas Christian University",48
+"Texas Lutheran University",48
+"Texas Tech University",48
+"Trinity University",48
+"Brigham Young University-Provo",49
+"Southern Utah University",49
+"Utah State University",49
+"University of Utah",49
+"Westminster College",49
+"Bennington College",50
+"Castleton State College",50
+"Champlain College",50
+"Marlboro College",50
+"Norwich University",50
+"Saint Michael's College",50
+"University of Vermont",50
+"Bridgewater College",51
+"College of William and Mary",51
+"Regent University",51
+"Christopher Newport University",51
+"Eastern Mennonite University",51
+"George Mason University",51
+"Hampden-Sydney College",51
+"Hampton University",51
+"Hollins University",51
+"James Madison University",51
+"Liberty University",51
+"Longwood University",51
+"Lynchburg College",51
+"University of Mary Washington",51
+"Marymount University",51
+"Old Dominion University",51
+"Radford University",51
+"Randolph-Macon College",51
+"Randolph College",51
+"University of Richmond",51
+"Roanoke College",51
+"Sweet Briar College",51
+"Virginia Polytechnic Institute and State University",51
+"Virginia Commonwealth University",51
+"University of Virginia-Main Campus",51
+"Virginia Military Institute",51
+"Central Washington University",53
+"The Evergreen State College",53
+"Gonzaga University",53
+"Pacific Lutheran University",53
+"University of Puget Sound",53
+"Seattle Pacific University",53
+"Seattle University",53
+"Washington State University",53
+"University of Washington-Seattle Campus",53
+"Western Washington University",53
+"Whitworth University",53
+"West Virginia Wesleyan College",54
+"West Virginia University",54
+"Wheeling Jesuit University",54
+"Beloit College",55
+"Carroll University",55
+"Carthage College",55
+"Concordia University-Wisconsin",55
+"Edgewood College",55
+"Lakeland College",55
+"Lawrence University",55
+"Marian University",55
+"Marquette University",55
+"Milwaukee Institute of Art & Design",55
+"Milwaukee School of Engineering",55
+"Northland College",55
+"Ripon College",55
+"University of Wisconsin-Whitewater",55
+"University of Wisconsin-Eau Claire",55
+"University of Wisconsin-La Crosse",55
+"Wisconsin Lutheran College",55
+"University of Wisconsin-Oshkosh",55
+"University of Wisconsin-Stout",55
+"University of Wisconsin-Madison",55
+"University of Wisconsin-Platteville",55
+"University of Wisconsin-River Falls",55
+"University of Wisconsin-Stevens Point",55
+"Stanford University",6
+"Purdue University-Main Campus",18
+"St John's College",35
+"Nossi College of Art",47
+"University of Washington-Bothell Campus",53
+"King's College",37
+"Everglades University",12
+"Herzing University-Winter Park",12
+"Embry-Riddle Aeronautical University-Worldwide",12
+"University of Connecticut-Tri-Campus",9
+"University of Connecticut-Stamford",9
+"Johnson & Wales University-Denver",8
+"California State University-Channel Islands",6
+"DigiPen Institute of Technology",53
+"Neumont University",49
+"Johnson & Wales University-Charlotte",37

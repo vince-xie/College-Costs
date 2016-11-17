@@ -8,7 +8,7 @@ body {
     width: 100%;
 }
 
-.menu {
+.info {
     background-color: #ecf0f1;
     display: inline-block;
     height: 100vh;
@@ -21,6 +21,10 @@ body {
     margin-right: 0px;
 }
 
+.info-list p {
+    display: inline;
+}
+
 .school {
     width: 400px;
     padding:10px;
@@ -29,7 +33,7 @@ body {
     color: #ecf0f1;
 }
 
-.menu-list h3 {
+.info-list h3 {
     color: #7f8c8d;
 }
 
@@ -37,7 +41,7 @@ canvas {
     margin-bottom: 20px;
 }
 
-.menu-list > div {
+.info-list > div {
     margin-left: 15px;
     margin-top: 10px;
 }
@@ -51,7 +55,7 @@ a:hover {
     padding-top: 17px;
 }
 
-.menu-list {
+.info-list {
     list-style-type: none;
     padding-left: 10px;
 }
@@ -85,14 +89,6 @@ a:hover {
     min-width: 650px;
 }
 
-#menu-button {
-    float: left;
-    border: none;
-    margin: 10px 0px 15px 15px;
-    height: 7%;
-    min-height: 50px;
-}
-
 .ui-menu {
     background-color: white;
     max-height: 40vh;
@@ -105,24 +101,35 @@ a:hover {
     color: #3498db;
 }
 
-#search-button {
+.browse-button {
     border: none;
-    margin: 10px 0px 15px 0px;
+    margin: 10px 0px 15px 15px;
     height: 7%;
     min-height: 50px;
-}
-
-.main button {
-    margin-right: 20px;
-    background-color: #990000;
-    color: #FFFFFF;
-    font-weight: bold;
+    float: left;
+    background-color: transparent;
+    color: #ecf0f1;
     font-size: 2em;
     border: none;
-    border-radius: 8px;
+    outline: none;
     padding: 5px;
 }
 
-.main button:hover {
-    background-color: #CC0000;
+.search-button {
+    height: 7%;
+    min-height: 50px;
+    background-color: transparent;
+    color: #ecf0f1;
+    font-size: 2em;
+    border: none;
+    outline: none;
+    padding: 5px;
+}
+
+.search-button:hover .browse-button:hover {
+    color: #FFFFFF;
+}
+
+.radar-chart-container, .salary-chart-container, .repayment-chart-container {
+    margin: 10 0 0 0 !important;
 }
