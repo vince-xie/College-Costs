@@ -1,86 +1,160 @@
 <div id="browse" class="jumbotron">
 	<h2> Browse </h2>
+	<div class="filter-type">
+		<!-- Browse by -->
+		<div id="browse-by" class="btn-group" data-toggle="buttons">
+  			<label class="btn btn-primary active">
+			    <input type="radio" checked> Browse by name
+			</label>
+			<label class="btn btn-primary">
+				<input type="radio"> Browse by state
+		  	</label>
+		</div>
+	</div>
 	<div class="filters">
 		<!-- State -->
 		<div class="btn-group">
-		  <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-		     All states <span class="caret"></span>
-		  </button>
-		  <ul class="dropdown-menu">
-		    <li><a href="#">Action</a></li>
-		    <li><a href="#">Another action</a></li>
-		    <li><a href="#">Something else here</a></li>
-		    <li role="separator" class="divider"></li>
-		    <li><a href="#">Separated link</a></li>
-		  </ul>
+			<input type="hidden" name="state" value="all" />
+		  	<button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+		     	All states <span class="caret"></span>
+		  	</button>
+		  	<ul class="dropdown-menu" reversed>
+		  		<li><a>All states</a><input type="hidden" value="all" /></li>
+				<li><a>Alabama</a><input type="hidden" value="1" /></li>
+				<li><a>Alaska</a><input type="hidden" value="2" /></li>
+				<li><a>Arizona</a><input type="hidden" value="4" /></li>
+				<li><a>Arkansas</a><input type="hidden" value="5" /></li>
+				<li><a>California</a><input type="hidden" value="6" /></li>
+				<li><a>Colorado</a><input type="hidden" value="8" /></li>
+				<li><a>Connecticut</a><input type="hidden" value="9" /></li>
+				<li><a>Delaware</a><input type="hidden" value="10" /></li>
+				<li><a>District of Columbia</a><input type="hidden" value="11" /></li>
+				<li><a>Florida</a><input type="hidden" value="12" /></li>
+				<li><a>Georgia</a><input type="hidden" value="13" /></li>
+				<li><a>Hawaii</a><input type="hidden" value="15" /></li>
+				<li><a>Idaho</a><input type="hidden" value="16" /></li>
+				<li><a>Illinois</a><input type="hidden" value="17" /></li>
+				<li><a>Indiana</a><input type="hidden" value="18" /></li>
+				<li><a>Iowa</a><input type="hidden" value="19" /></li>
+				<li><a>Kansas</a><input type="hidden" value="20" /></li>
+				<li><a>Kentucky</a><input type="hidden" value="21" /></li>
+				<li><a>Louisiana</a><input type="hidden" value="22" /></li>
+				<li><a>Maine</a><input type="hidden" value="23" /></li>
+				<li><a>Maryland</a><input type="hidden" value="24" /></li>
+				<li><a>Massachusetts</a><input type="hidden" value="25" /></li>
+				<li><a>Michigan</a><input type="hidden" value="26" /></li>
+				<li><a>Minnesota</a><input type="hidden" value="27" /></li>
+				<li><a>Mississippi</a><input type="hidden" value="28" /></li>
+				<li><a>Missouri</a><input type="hidden" value="29" /></li>
+				<li><a>Montana</a><input type="hidden" value="30" /></li>
+				<li><a>Nebraska</a><input type="hidden" value="31" /></li>
+				<li><a>Nevada</a><input type="hidden" value="32" /></li>
+				<li><a>New Hampshire</a><input type="hidden" value="33" /></li>
+				<li><a>New Jersey</a><input type="hidden" value="34" /></li>
+				<li><a>New Mexico</a><input type="hidden" value="35" /></li>
+				<li><a>New York</a><input type="hidden" value="36" /></li>
+				<li><a>North Carolina</a><input type="hidden" value="37" /></li>
+				<li><a>North Dakota</a><input type="hidden" value="38" /></li>
+				<li><a>Ohio</a><input type="hidden" value="39" /></li>
+				<li><a>Oklahoma</a><input type="hidden" value="40" /></li>
+				<li><a>Oregon</a><input type="hidden" value="41" /></li>
+				<li><a>Pennsylvania</a><input type="hidden" value="42" /></li>
+				<li><a>Rhode Island</a><input type="hidden" value="44" /></li>
+				<li><a>South Carolina</a><input type="hidden" value="37" /></li>
+				<li><a>South Dakota</a><input type="hidden" value="46" /></li>
+				<li><a>Tennessee</a><input type="hidden" value="47" /></li>
+				<li><a>Texas</a><input type="hidden" value="48" /></li>
+				<li><a>Utah</a><input type="hidden" value="49" /></li>
+				<li><a>Vermont</a><input type="hidden" value="50" /></li>
+				<li><a>Virginia</a><input type="hidden" value="51" /></li>
+				<li><a>Washington</a><input type="hidden" value="53" /></li>
+				<li><a>West Virginia</a><input type="hidden" value="54" /></li>
+				<li><a>Wisconsin</a><input type="hidden" value="55" /></li>
+				<li><a>Wyoming</a><input type="hidden" value="56" /></li>
+		  	</ul>
 		</div>
 		<!-- In State Tuition -->
 		<div class="btn-group">
-		  <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-		    All in-state tuitions <span class="caret"></span>
-		  </button>
-		  <ul class="dropdown-menu">
-		    <li><a href="#">Action</a></li>
-		    <li><a href="#">Another actions</a></li>
-		    <li><a href="#">Something else here</a></li>
-		    <li role="separator" class="divider"></li>
-		    <li><a href="#">Separated link</a></li>
-		  </ul>
+			<input type="hidden" name="in-state-tuition" value="all" />
+		  	<button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+		    	All in-state tuitions <span class="caret"></span>
+		  	</button>
+		  	<ul class="dropdown-menu">
+		  		<li><a>All in-state tuitions</a><input type="hidden" value="all" /></li>
+		  		<li><a>$50,000+ in-state tuition</a><input type="hidden" value="50" /></li>
+		  		<li><a>$40,000 - $49,999 in-state tuition</a><input type="hidden" value="40" /></li>
+		  		<li><a>$30,000 - $39,999 in-state tuition</a><input type="hidden" value="30" /></li>
+		  		<li><a>$20,000 - $29,999 in-state tuition</a><input type="hidden" value="20" /></li>
+		  		<li><a>$10,000 - $19,999 in-state tuition</a><input type="hidden" value="10" /></li>
+		  		<li><a>$0 - $9999 in-state tuition</a><input type="hidden" value="" /></li>
+		  	</ul>
 		</div>
 		<!-- Out of State Tuition -->
 		<div class="btn-group">
-		  <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-		    All out-of-state tuitions <span class="caret"></span>
-		  </button>
-		  <ul class="dropdown-menu">
-		    <li><a href="#">Action</a></li>
-		    <li><a href="#">Another actions</a></li>
-		    <li><a href="#">Something else here</a></li>
-		    <li role="separator" class="divider"></li>
-		    <li><a href="#">Separated link</a></li>
-		  </ul>
+			<input type="hidden" name="out-of-state-tuition" value="all" />
+		  	<button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+		    	All out-of-state tuitions <span class="caret"></span>
+		  	</button>
+		  	<ul class="dropdown-menu">
+		  		<li><a>All out-of-state tuitions</a><input type="hidden" value="all" /></li>
+		  		<li><a>$50,000+ out-of-state tuition</a><input type="hidden" value="50" /></li>
+		  		<li><a>$40,000 - $49,999 out-of-state tuition</a><input type="hidden" value="40" /></li>
+		  		<li><a>$30,000 - $39,999 out-of-state tuition</a><input type="hidden" value="30" /></li>
+		  		<li><a>$20,000 - $29,999 out-of-state tuition</a><input type="hidden" value="20" /></li>
+		  		<li><a>$10,000 - $19,999 out-of-state tuition</a><input type="hidden" value="10" /></li>
+		  		<li><a>$0 - $9999 out-of-state tuition</a><input type="hidden" value="0" /></li>
+		  	</ul>
 		</div>
 		<!-- Average Salary -->
 		<div class="btn-group">
-		  <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-		    All average salaries <span class="caret"></span>
-		  </button>
-		  <ul class="dropdown-menu">
-		    <li><a href="#">Action</a></li>
-		    <li><a href="#">Another actions</a></li>
-		    <li><a href="#">Something else here</a></li>
-		    <li role="separator" class="divider"></li>
-		    <li><a href="#">Separated link</a></li>
-		  </ul>
+			<input type="hidden" name="average-salary" value="all" />
+			<button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+		    	All average salaries <span class="caret"></span>
+		  	</button>
+		  	<ul class="dropdown-menu">
+		  		<li><a>All average salaries</a><input type="hidden" value="all" /></li>
+		  		<li><a>$100,000+ average salary</a><input type="hidden" value="100" /></li>
+		  		<li><a>$80,000 - $99,999 average salary</a><input type="hidden" value="80" /></li>
+		  		<li><a>$60,000 - $79,999 average salary</a><input type="hidden" value="60" /></li>
+		  		<li><a>$40,000 - $59,999 average salary</a><input type="hidden" value="40" /></li>
+		  		<li><a>$20,000 - $39,999 average salary</a><input type="hidden" value="20" /></li>
+		  		<li><a>$0 - $19,999 average salary</a><input type="hidden" value="0" /></li>
+		  	</ul>
 		</div>
 		<!-- Sort by -->
 		<div class="btn-group">
-		  <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-		    Sort by name <span class="caret"></span>
-		  </button>
-		  <ul class="dropdown-menu">
-		    <li><a href="#">Action</a></li>
-		    <li><a href="#">Another actions</a></li>
-		    <li><a href="#">Something else here</a></li>
-		    <li role="separator" class="divider"></li>
-		    <li><a href="#">Separated link</a></li>
-		  </ul>
+			<input type="hidden" name="sort-by" value="all" />
+		  	<button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+		    	Sort by name <span class="caret"></span>
+		  	</button>
+		 	<ul class="dropdown-menu">
+		 		<li><a>Sort by name</a><input type="hidden" value="name" /></li>
+		  		<li><a>Sort by score</a><input type="hidden" value="score" /></li>
+		  		<li><a>Sort by city</a><input type="hidden" value="city" /></li>
+		  		<li><a>Sort by state</a><input type="hidden" value="state" /></li>
+		  		<li><a>Sort by in-state tuition</a><input type="hidden" value="in-state-tuition" /></li>
+		  		<li><a>Sort by out-of-state tuition</a><input type="hidden" value="out-of-state-tuition" /></li>
+		  		<li><a>Sort by average income</a><input type="hidden" value="average-income" /></li>
+		  	</ul>
 		</div>
 		<!-- Limit to -->
 		<div class="btn-group">
-		  <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-		    No limit <span class="caret"></span>
-		  </button>
-		  <ul class="dropdown-menu">
-		    <li><a href="#">Action</a></li>
-		    <li><a href="#">Another actions</a></li>
-		    <li><a href="#">Something else here</a></li>
-		    <li role="separator" class="divider"></li>
-		    <li><a href="#">Separated link</a></li>
-		  </ul>
+			<input type="hidden" name="limit" value="all" />
+		  	<button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+		    	No limit <span class="caret"></span>
+		  	</button>
+		  	<ul class="dropdown-menu">
+		  		<li><a>No limit</a><input type="hidden" value="all" /></li>
+		  		<li><a>Limit to 5</a><input type="hidden" value="5" /></li>
+		  		<li><a>Limit to 10</a><input type="hidden" value="10" /></li>
+		  		<li><a>Limit to 25</a><input type="hidden" value="25" /></li>
+		  		<li><a>Limit to 50</a><input type="hidden" value="50" /></li>
+		  		<li><a>Limit to 100</a><input type="hidden" value="100" /></li>
+		  		<li><a>Limit to 250</a><input type="hidden" value="250" /></li>
+		  	</ul>
 		</div>
 
-		<button type="button" class="btn btn-primary">
+		<button type="button" class="btn btn-primary" onclick="browse();">
 		  	Submit
 		</button>
 	</div>
@@ -89,21 +163,20 @@
 		  <thead class="thead-default text-center" align="center">
 		    <tr>
 		      <th>School</th>
+		      <th>Score</th>
 		      <th>City</th>
 		      <th>State</th>
-		      <th>Score</th>
 		      <th>In-state tuition</th>
 		      <th>Out-of-state tuition</th>
 		      <th>Average Income</th>
-		      <th></th>
 		    </tr>
 		  </thead>
 		  <tbody>
 		    <tr>
-		      <td><a>Princeton University</a></td>
+		      <td><a href="/?name=Princeton University">Princeton University</a></td>
+		      <td>97</td>
 		      <td>Princeton</td>
 		      <td>New Jersey</td>
-		      <td>97</td>
 		      <td>$40,170</td>
 		      <td>$40,170</td>
 		      <td>$75,204</td>

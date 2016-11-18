@@ -88,6 +88,29 @@ function getSchoolInfo(name) {
     });
 }
 
+function browse() {
+    if ($('#browse-by .active').html().includes('name')) {
+        $.ajax({
+            dataType: "JSON",
+            type: 'post',
+            url: "php/QueryBrowseByName.php",
+            data: {
+                state: $("[name = 'state']").val(),
+                in_state_tuition: $("[name = 'in-state-tuition']").val(),
+                out_of_state_tuition: $("[name = 'out-of-state-tuition']").val(),
+                average_salary: $("[name = 'average-salary']").val(),
+                sort_by: $("[name = 'sort-by']").val(),
+                limit: $("[name = 'limit']").val()
+            },
+            success: function(list) {
+                alert('success');
+            }
+        });
+    } else {
+        alert('state');
+    }
+}
+
 function openInfo(school) {
     $("#radar-chart").remove();
     $("#salary-chart").remove();

@@ -18,12 +18,6 @@ app.config(function($routeProvider, $locationProvider){
   $locationProvider.html5Mode(true);
 });
 
-app.controller('browse-controller', ['$scope', '$routeParams', function($scope, $routeParams){
-  	$('.back-button').show();
-  	$('.browse-button').hide();
-  	$('#map').hide();
-}]);
-
 app.controller('map-controller', ['$scope', '$routeParams', function($scope, $routeParams){
   	$('.back-button').hide();
   	$('.browse-button').show();
@@ -37,4 +31,14 @@ app.controller('map-controller', ['$scope', '$routeParams', function($scope, $ro
 	  		getSchoolInfo(name);
 	  	}
   	}
+}]);
+
+app.controller('browse-controller', ['$scope', '$routeParams', function($scope, $routeParams){
+    $('.back-button').show();
+    $('.browse-button').hide();
+    $('#map').hide();
+    $('#browse .dropdown-menu a').click(function() {
+        $(this).parent().parent().parent().children('.btn').html($(this).html() + " <span class=\"caret\"></span>");
+        $(this).parent().parent().parent().children('input').attr('value', $(this).parent().children('input').val());
+    });
 }]);
