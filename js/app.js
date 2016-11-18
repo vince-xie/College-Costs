@@ -29,7 +29,8 @@ app.controller('map-controller', ['$scope', '$routeParams', function($scope, $ro
   	$('.browse-button').show();
   	$('#map').show();
   	if (window.map) {
-  	var name = $routeParams.name;
+      google.maps.event.trigger(map, 'resize');
+      var name = $routeParams.name;
 	  	if (name) {
 	  		toggleSearchWithoutSelect();
 	  		$('#search').attr('value', name);

@@ -243,6 +243,7 @@ function setUpSearch(schools) {
         select: function (e, ui) {
             $("#search").blur();
             if (window.location.toString().includes("browse")) {
+                $("#browse").hide();
                 window.location = '/?name=' + ui.item.value;
             }
             var schoolInfo = getSchoolInfo(ui.item.value);
