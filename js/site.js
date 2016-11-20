@@ -88,8 +88,28 @@ function getSchoolInfo(name) {
     });
 }
 
+function toggleBrowse() {
+    if ($('#browse-by .active').html().includes('name')) {
+        $('#state').hide();
+        $('#name').show();
+        $('#state-table').hide();
+        $('#name-table').show();
+        $('#state-table .browse-table-body').hide();
+        $('#name-table .browse-table-body').show();
+    } else {
+        $('#name').hide();
+        $('#state').show();
+        $('#name-table').hide();
+        $('#state-table').show();
+        $('#name-table .browse-table-body').hide();
+        $('#state-table .browse-table-body').show();
+    }
+}
+
 function browse() {
     if ($('#browse-by .active').html().includes('name')) {
+        $('#state').hide();
+        $('#name').show();
         $.ajax({
             dataType: "JSON",
             type: 'post',
@@ -103,7 +123,7 @@ function browse() {
                 limit: $("[name = 'limit']").val()
             },
             success: function(list) {
-                $('.browse-table-body td').remove();
+                $('#name-table .browse-table-body td').remove();
                 var row;
                 if (list) {
                     for (var i = 0; i < list.length; i++) {
@@ -112,16 +132,41 @@ function browse() {
                             + s.score + "</td><td>" + s.city + "</td><td>" + s.state + "</td><td>" 
                             + formatMoney(s.in_state_tuition) + "</td><td>" + formatMoney(s.out_of_state_tuition) + "</td><td>" 
                             + formatMoney(s.average_salary) + "</td></tr>";
-                        $('.browse-table-body').append(row);
+                        $('#name-table .browse-table-body').append(row);
                     }
                 }
             },
             error: function(e) {
-                $('.browse-table-body td').remove();
+                $('#name-table .browse-table-body td').remove();
             }
         });
     } else {
-        alert('state');
+        $.ajax({
+            dataType: "JSON",
+            type: 'post',
+            url: "php/QueryBrowseByState.php",
+            data: {
+                state: $("[name = 'state-state']").val(),
+                sort_by: $("[name = 'state-sort-by']").val(),
+                limit: $("[name = 'state-limit']").val()
+            },
+            success: function(list) {
+                $('#state-table .browse-table-body td').remove();
+                var row;
+                if (list) {
+                    for (var i = 0; i < list.length; i++) {
+                        var s = list[i];
+                        row = "<tr><td>" + s.name + "</td><td>" + s.score + "</td><td>" + s.average_school_score + "</td><td>" 
+                            + formatMoney(s.average_in_state_tuition) + "</td><td>" + formatMoney(s.average_out_of_state_tuition) + "</td><td>" 
+                            + formatMoney(s.avg_salary) + "</td></tr>";
+                        $('#state-table .browse-table-body').append(row);
+                    }
+                }
+            },
+            error: function(e) {
+                $('#state-table .browse-table-body td').remove();
+            }
+        });
     }
 }
 
