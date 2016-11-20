@@ -14,12 +14,12 @@
 	<div class="filters">
 		<!-- State -->
 		<div class="btn-group">
-			<input type="hidden" name="state" value="all" />
+			<input type="hidden" name="state" value="0" />
 		  	<button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
 		     	All states <span class="caret"></span>
 		  	</button>
 		  	<ul class="dropdown-menu" reversed>
-		  		<li><a>All states</a><input type="hidden" value="all" /></li>
+		  		<li><a>All states</a><input type="hidden" value="0" /></li>
 				<li><a>Alabama</a><input type="hidden" value="1" /></li>
 				<li><a>Alaska</a><input type="hidden" value="2" /></li>
 				<li><a>Arizona</a><input type="hidden" value="4" /></li>
@@ -75,14 +75,13 @@
 		</div>
 		<!-- In State Tuition -->
 		<div class="btn-group">
-			<input type="hidden" name="in-state-tuition" value="all" />
+			<input type="hidden" name="in-state-tuition" value="0" />
 		  	<button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
 		    	All in-state tuitions <span class="caret"></span>
 		  	</button>
 		  	<ul class="dropdown-menu">
-		  		<li><a>All in-state tuitions</a><input type="hidden" value="all" /></li>
-		  		<li><a>$50,000+ in-state tuition</a><input type="hidden" value="50" /></li>
-		  		<li><a>$40,000 - $49,999 in-state tuition</a><input type="hidden" value="40" /></li>
+		  		<li><a>All in-state tuitions</a><input type="hidden" value="0" /></li>
+		  		<li><a>$40,000+ in-state tuition</a><input type="hidden" value="40" /></li>
 		  		<li><a>$30,000 - $39,999 in-state tuition</a><input type="hidden" value="30" /></li>
 		  		<li><a>$20,000 - $29,999 in-state tuition</a><input type="hidden" value="20" /></li>
 		  		<li><a>$10,000 - $19,999 in-state tuition</a><input type="hidden" value="10" /></li>
@@ -91,14 +90,13 @@
 		</div>
 		<!-- Out of State Tuition -->
 		<div class="btn-group">
-			<input type="hidden" name="out-of-state-tuition" value="all" />
+			<input type="hidden" name="out-of-state-tuition" value="0" />
 		  	<button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
 		    	All out-of-state tuitions <span class="caret"></span>
 		  	</button>
 		  	<ul class="dropdown-menu">
-		  		<li><a>All out-of-state tuitions</a><input type="hidden" value="all" /></li>
-		  		<li><a>$50,000+ out-of-state tuition</a><input type="hidden" value="50" /></li>
-		  		<li><a>$40,000 - $49,999 out-of-state tuition</a><input type="hidden" value="40" /></li>
+		  		<li><a>All out-of-state tuitions</a><input type="hidden" value="0" /></li>
+		  		<li><a>$40,000+ out-of-state tuition</a><input type="hidden" value="40" /></li>
 		  		<li><a>$30,000 - $39,999 out-of-state tuition</a><input type="hidden" value="30" /></li>
 		  		<li><a>$20,000 - $29,999 out-of-state tuition</a><input type="hidden" value="20" /></li>
 		  		<li><a>$10,000 - $19,999 out-of-state tuition</a><input type="hidden" value="10" /></li>
@@ -107,23 +105,23 @@
 		</div>
 		<!-- Average Salary -->
 		<div class="btn-group">
-			<input type="hidden" name="average-salary" value="all" />
+			<input type="hidden" name="average-salary" value="0" />
 			<button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
 		    	All average incomes <span class="caret"></span>
 		  	</button>
 		  	<ul class="dropdown-menu">
-		  		<li><a>All average incomes</a><input type="hidden" value="all" /></li>
-		  		<li><a>$50,000+ average income</a><input type="hidden" value="100" /></li>
-		  		<li><a>$40,000 - $49,999 average income</a><input type="hidden" value="80" /></li>
-		  		<li><a>$30,000 - $39,999 average income</a><input type="hidden" value="60" /></li>
-		  		<li><a>$20,000 - $29,999 average income</a><input type="hidden" value="40" /></li>
-		  		<li><a>$10,000 - $19,999 average income</a><input type="hidden" value="20" /></li>
+		  		<li><a>All average incomes</a><input type="hidden" value="0" /></li>
+		  		<li><a>$50,000+ average income</a><input type="hidden" value="50" /></li>
+		  		<li><a>$40,000 - $49,999 average income</a><input type="hidden" value="40" /></li>
+		  		<li><a>$30,000 - $39,999 average income</a><input type="hidden" value="30" /></li>
+		  		<li><a>$20,000 - $29,999 average income</a><input type="hidden" value="20" /></li>
+		  		<li><a>$10,000 - $19,999 average income</a><input type="hidden" value="10" /></li>
 		  		<li><a>$0 - $9,999 average income</a><input type="hidden" value="0" /></li>
 		  	</ul>
 		</div>
 		<!-- Sort by -->
 		<div class="btn-group">
-			<input type="hidden" name="sort-by" value="all" />
+			<input type="hidden" name="sort-by" value="name" />
 		  	<button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
 		    	Sort by name <span class="caret"></span>
 		  	</button>
@@ -131,20 +129,20 @@
 		 		<li><a>Sort by name</a><input type="hidden" value="name" /></li>
 		  		<li><a>Sort by score</a><input type="hidden" value="score" /></li>
 		  		<li><a>Sort by city</a><input type="hidden" value="city" /></li>
-		  		<li><a>Sort by state</a><input type="hidden" value="state" /></li>
-		  		<li><a>Sort by in-state tuition</a><input type="hidden" value="in-state-tuition" /></li>
-		  		<li><a>Sort by out-of-state tuition</a><input type="hidden" value="out-of-state-tuition" /></li>
-		  		<li><a>Sort by average income</a><input type="hidden" value="average-income" /></li>
+		  		<li><a>Sort by state</a><input type="hidden" value="7" /></li>
+		  		<li><a>Sort by in-state tuition</a><input type="hidden" value="in_state_tuition" /></li>
+		  		<li><a>Sort by out-of-state tuition</a><input type="hidden" value="out_of_state_tuition" /></li>
+		  		<li><a>Sort by average income</a><input type="hidden" value="average_salary" /></li>
 		  	</ul>
 		</div>
 		<!-- Limit to -->
 		<div class="btn-group">
-			<input type="hidden" name="limit" value="all" />
+			<input type="hidden" name="limit" value="0" />
 		  	<button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
 		    	No limit <span class="caret"></span>
 		  	</button>
 		  	<ul class="dropdown-menu">
-		  		<li><a>No limit</a><input type="hidden" value="all" /></li>
+		  		<li><a>No limit</a><input type="hidden" value="0" /></li>
 		  		<li><a>Limit to 5</a><input type="hidden" value="5" /></li>
 		  		<li><a>Limit to 10</a><input type="hidden" value="10" /></li>
 		  		<li><a>Limit to 25</a><input type="hidden" value="25" /></li>
@@ -171,16 +169,7 @@
 		      <th>Average Income</th>
 		    </tr>
 		  </thead>
-		  <tbody>
-		    <tr>
-		      <td><a href="/?name=Princeton University">Princeton University</a></td>
-		      <td>97</td>
-		      <td>Princeton</td>
-		      <td>New Jersey</td>
-		      <td>$40,170</td>
-		      <td>$40,170</td>
-		      <td>$75,204</td>
-		    </tr>
+		  <tbody class="browse-table-body">
 		  </tbody>
 		</table>
 	</div>

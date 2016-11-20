@@ -103,7 +103,21 @@ function browse() {
                 limit: $("[name = 'limit']").val()
             },
             success: function(list) {
-                alert('success');
+                $('.browse-table-body td').remove();
+                var row;
+                if (list) {
+                    for (var i = 0; i < list.length; i++) {
+                        var s = list[i];
+                        row = "<tr><td><a href=\"/?name=" + s.name + "\">" + s.name + "</a></td><td>" 
+                            + s.score + "</td><td>" + s.city + "</td><td>" + s.state + "</td><td>" 
+                            + formatMoney(s.in_state_tuition) + "</td><td>" + formatMoney(s.out_of_state_tuition) + "</td><td>" 
+                            + formatMoney(s.average_salary) + "</td></tr>";
+                        $('.browse-table-body').append(row);
+                    }
+                }
+            },
+            error: function(e) {
+                $('.browse-table-body td').remove();
             }
         });
     } else {
