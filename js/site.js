@@ -42,10 +42,37 @@ function getSchoolInfo(name) {
             if(window.marker != null) {
                 window.marker.setMap(null);
             }
-            window.marker = new google.maps.Marker({
-                position: location,
-                map: map
-            });
+            var roi_score = decimalToPercent(1 - 1 / ((school.salary_twentyfive + school.salary_seventyfive) / 2 / ((school.in_state_tuition + school.out_of_state_tuition) / 2)) / 5);
+            var cost_score = decimalToPercent(1 - 1 / (100000 / ((school.in_state_tuition + school.out_of_state_tuition + 2 * school.average_student_debt) / 4)));
+            var state_score = school.state_score;
+            var graduation_score = decimalToPercent(school.graduation_rate);
+            var retention_score = decimalToPercent(school.retention_rate);
+            var total_score = decimalToPercent((.2 * roi_score + .1 * cost_score + .1 * state_score + .3 * graduation_score + .3 * retention_score) / 100);
+            if (total_score >= 90) {
+                window.marker = new google.maps.Marker({
+                    position: location,
+                    map: map,
+                    icon: 'http://maps.google.com/mapfiles/ms/icons/green-dot.png'
+                });
+            } else if (total_score >= 80) {
+                window.marker = new google.maps.Marker({
+                    position: location,
+                    map: map,
+                    icon: 'http://maps.google.com/mapfiles/ms/icons/yellow-dot.png'
+                });
+            } else if (total_score >= 70) {
+                window.marker = new google.maps.Marker({
+                    position: location,
+                    map: map,
+                    icon: 'http://maps.google.com/mapfiles/ms/icons/orange-dot.png'
+                });
+            } else {
+                window.marker = new google.maps.Marker({
+                    position: location,
+                    map: map,
+                    icon: 'http://maps.google.com/mapfiles/ms/icons/red-dot.png'
+                });
+            }
             window.map.panTo(location);
             window.map.setZoom(12);
 
@@ -179,7 +206,7 @@ function openInfo(school) {
     $(".repayment-chart-container").append("<canvas id=\"repayment-chart\" width=\"400\" height=\"400\"></canvas>");
 
 	var radarChart = document.getElementById("radar-chart");
-    var roi_score = decimalToPercent(1 - 1 / ((school.salary_twentyfive + school.salary_seventyfive) / 2 / ((school.in_state_tuition + school.out_of_state_tuition) / 2)) / 10);
+    var roi_score = decimalToPercent(1 - 1 / ((school.salary_twentyfive + school.salary_seventyfive) / 2 / ((school.in_state_tuition + school.out_of_state_tuition) / 2)) / 5);
     var cost_score = decimalToPercent(1 - 1 / (100000 / ((school.in_state_tuition + school.out_of_state_tuition + 2 * school.average_student_debt) / 4)));
     var state_score = school.state_score;
     var graduation_score = decimalToPercent(school.graduation_rate);
@@ -191,7 +218,7 @@ function openInfo(school) {
     	labels: ["Return on investment", "Cost and debt", "Location", "Graduation rate", "Retention rate"],
     	datasets: [
 	        {
-	            label: "Individual scores",
+	            label: "Individual score",
 	            backgroundColor: "rgba(255,99,132,0.2)",
             	borderColor: "rgba(255,99,132,1)",
             	pointBackgroundColor: "rgba(255,99,132,1)",

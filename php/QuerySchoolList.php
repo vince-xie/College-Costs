@@ -2,6 +2,11 @@
 
 header("Content-type: text/javascript");
 
+$server = "";
+$username = "";
+$password = "";
+$db = "";
+
 $db_connection = new mysqli($server, $username, $password, $db);
 if ($db_connection->connect_error) {
     die("Connection to MySQL database failed.");
