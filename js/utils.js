@@ -63,7 +63,7 @@ function getDecimalColorReverse(rate, average) {
 }
 
 function getScoreColor(score) {
-	if (score >= 90) {
+	if (score >= 87) {
 		return "#009900";
 	} else if (score >= 80) {
 		return "#b5af17";

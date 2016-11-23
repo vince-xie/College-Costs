@@ -48,7 +48,7 @@ function getSchoolInfo(name) {
             var graduation_score = decimalToPercent(school.graduation_rate);
             var retention_score = decimalToPercent(school.retention_rate);
             var total_score = decimalToPercent((.2 * roi_score + .1 * cost_score + .1 * state_score + .3 * graduation_score + .3 * retention_score) / 100);
-            if (total_score >= 90) {
+            if (total_score >= 87) {
                 window.marker = new google.maps.Marker({
                     position: location,
                     map: map,
@@ -155,7 +155,7 @@ function browse() {
                 if (list) {
                     for (var i = 0; i < list.length; i++) {
                         var s = list[i];
-                        row = "<tr><td><a href=\"/?name=" + s.name + "\">" + s.name + "</a></td><td>" 
+                        row = "<tr><td>" + (i + 1) + "</td><td><a href=\"/?name=" + s.name + "\">" + s.name + "</a></td><td>" 
                             + decimalToPercent(s.score) + "</td><td>" + s.city + "</td><td>" + s.state + "</td><td>" 
                             + formatMoney(s.in_state_tuition) + "</td><td>" + formatMoney(s.out_of_state_tuition) + "</td><td>" 
                             + formatMoney(s.average_salary) + "</td></tr>";
@@ -183,7 +183,7 @@ function browse() {
                 if (list) {
                     for (var i = 0; i < list.length; i++) {
                         var s = list[i];
-                        row = "<tr><td>" + s.name + "</td><td>" + s.score + "</td><td>" + decimalToPercent(s.average_school_score) + "</td><td>" 
+                        row = "<tr><td>" + (i + 1) + "</td><td>" + s.name + "</td><td>" + s.score + "</td><td>" + decimalToPercent(s.average_school_score) + "</td><td>" 
                             + formatMoney(s.average_in_state_tuition) + "</td><td>" + formatMoney(s.average_out_of_state_tuition) + "</td><td>" 
                             + formatMoney(s.avg_salary) + "</td></tr>";
                         $('#state-table .browse-table-body').append(row);
