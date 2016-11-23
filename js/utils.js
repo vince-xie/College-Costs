@@ -62,6 +62,18 @@ function getDecimalColorReverse(rate, average) {
 	}
 }
 
+function getScoreColor(score) {
+	if (score >= 90) {
+		return "#009900";
+	} else if (score >= 80) {
+		return "#b5af17";
+	} else if (score >= 70) {
+		return "#b37200";
+	} else {
+		return "#cc5200";
+	}
+}
+
 function getDecimalPopoverMessage(rate, average) {
     var difference = rate - average;
     if(difference >= 0) {

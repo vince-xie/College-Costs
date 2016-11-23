@@ -129,7 +129,7 @@ function browse() {
                     for (var i = 0; i < list.length; i++) {
                         var s = list[i];
                         row = "<tr><td><a href=\"/?name=" + s.name + "\">" + s.name + "</a></td><td>" 
-                            + s.score + "</td><td>" + s.city + "</td><td>" + s.state + "</td><td>" 
+                            + decimalToPercent(s.score) + "</td><td>" + s.city + "</td><td>" + s.state + "</td><td>" 
                             + formatMoney(s.in_state_tuition) + "</td><td>" + formatMoney(s.out_of_state_tuition) + "</td><td>" 
                             + formatMoney(s.average_salary) + "</td></tr>";
                         $('#name-table .browse-table-body').append(row);
@@ -156,7 +156,7 @@ function browse() {
                 if (list) {
                     for (var i = 0; i < list.length; i++) {
                         var s = list[i];
-                        row = "<tr><td>" + s.name + "</td><td>" + s.score + "</td><td>" + s.average_school_score + "</td><td>" 
+                        row = "<tr><td>" + s.name + "</td><td>" + s.score + "</td><td>" + decimalToPercent(s.average_school_score) + "</td><td>" 
                             + formatMoney(s.average_in_state_tuition) + "</td><td>" + formatMoney(s.average_out_of_state_tuition) + "</td><td>" 
                             + formatMoney(s.avg_salary) + "</td></tr>";
                         $('#state-table .browse-table-body').append(row);
@@ -179,8 +179,16 @@ function openInfo(school) {
     $(".repayment-chart-container").append("<canvas id=\"repayment-chart\" width=\"400\" height=\"400\"></canvas>");
 
 	var radarChart = document.getElementById("radar-chart");
+    var roi_score = decimalToPercent(1 - 1 / ((school.salary_twentyfive + school.salary_seventyfive) / 2 / ((school.in_state_tuition + school.out_of_state_tuition) / 2)) / 10);
+    var cost_score = decimalToPercent(1 - 1 / (100000 / ((school.in_state_tuition + school.out_of_state_tuition + 2 * school.average_student_debt) / 4)));
+    var state_score = school.state_score;
+    var graduation_score = decimalToPercent(school.graduation_rate);
+    var retention_score = decimalToPercent(school.retention_rate);
+    var total_score = decimalToPercent((.2 * roi_score + .1 * cost_score + .1 * state_score + .3 * graduation_score + .3 * retention_score) / 100);
+    $('.score p').html(total_score);
+    updateColors(".score font", getScoreColor(total_score));
     var data = {
-    	labels: ["Return on investment", "Cost", "Location", "Graduation Rate", "Retention Rate"],
+    	labels: ["Return on investment", "Cost and debt", "Location", "Graduation rate", "Retention rate"],
     	datasets: [
 	        {
 	            label: "Individual scores",
@@ -190,7 +198,7 @@ function openInfo(school) {
             	pointBorderColor: "#fff",
             	pointHoverBackgroundColor: "#fff",
             	pointHoverBorderColor: "rgba(255,99,132,1)",
-	            data: [85, 39, 52, 71, 56]
+	            data: [roi_score, cost_score, state_score, graduation_score, retention_score]
 	        }
     	]
 	};
@@ -204,7 +212,7 @@ function openInfo(school) {
     		},
     		scale: {
     			ticks: {
-    				display: false,
+                    display: false,
                     beginAtZero: true
                 }
     		}

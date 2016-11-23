@@ -25,6 +25,7 @@ if ($db_connection) {
             $state = $state_result->fetch_assoc();
             $row['state'] = $state['name'];
             $row['state_salary'] = $state['avg_salary'];
+            $row['state_score'] = $state['score'];
             $state_query->close();
         }
         echo json_encode($row); 
