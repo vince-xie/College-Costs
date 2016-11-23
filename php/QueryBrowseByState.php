@@ -20,7 +20,7 @@ if ($limit == -1) {
     $limit = 10000;
 }
 
-if (strcmp($sort_by, "1") != 0 && strcmp($sort_by, "2") != 0 && strcmp($sort_by, "3") != 0 && strcmp($sort_by, "in_state_tuition") != 0 && strcmp($sort_by, "out_of_state_tuition") != 0 && strcmp($sort_by, "6") != 0) {
+if (strcmp($sort_by, "1") != 0 && strcmp($sort_by, "2") != 0 && strcmp($sort_by, "3") != 0 && strcmp($sort_by, "4") != 0 && strcmp($sort_by, "5") != 0 && strcmp($sort_by, "6") != 0) {
     $sort_by = "1";
 }
 

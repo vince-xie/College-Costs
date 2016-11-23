@@ -3,7 +3,7 @@ function decimalToPercent(num) {
 }
 
 function formatMoney(amount) {
-    return "$" + (Math.round(amount * 100) / 100).toLocaleString();
+    return "$" + (Math.round(amount)).toLocaleString();
 }
 
 function updatePopover(element, message) {
