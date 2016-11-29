@@ -14,7 +14,7 @@ if ($db_connection->connect_error) {
 
 $name = $_POST['name'];
 if ($db_connection) {
-    $query = $db_connection->prepare("SELECT * FROM schools WHERE name = ?");
+    $query = $db_connection->prepare("SELECT * FROM schools WHERE name = ?;");
     $query->bind_param("s", $name);
     
     $query->execute();
