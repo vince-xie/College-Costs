@@ -155,10 +155,15 @@ function browse() {
                 if (list) {
                     for (var i = 0; i < list.length; i++) {
                         var s = list[i];
-                        row = "<tr><td>" + (i + 1) + "</td><td><a href=\"/?name=" + s.name + "\">" + s.name + "</a></td><td>" 
-                            + decimalToPercent(s.score) + "</td><td>" + s.city + "</td><td>" + s.state + "</td><td>" 
-                            + formatMoney(s.in_state_tuition) + "</td><td>" + formatMoney(s.out_of_state_tuition) + "</td><td>" 
-                            + formatMoney(s.average_salary) + "</td></tr>";
+                        row = "<tr><td>" + (i + 1) + "</td><td><a href=\"/?name=" + s.name + "\">" + s.name + "</a></td><td><font style=\"color: "
+                            + getScoreColor(decimalToPercent(s.score)) + ";\">"
+                            + decimalToPercent(s.score) + "</font></td><td>" + s.city + "</td><td>" + s.state + "</td><td><font style=\"color: " 
+                            + getDecimalColorReverse(s.in_state_tuition, averages.in_state_tuition) + ";\">"
+                            + formatMoney(s.in_state_tuition) + "</font></td><td><font style=\"color: " 
+                            + getDecimalColorReverse(s.out_of_state_tuition, averages.out_of_state_tuition) + ";\">"
+                            + formatMoney(s.out_of_state_tuition) + "</font></td><td><font style=\"color: " 
+                            + getDecimalColor(s.average_salary, averages.average_income) + ";\">"
+                            + formatMoney(s.average_salary) + "</font></td></tr>";
                         $('#name-table .browse-table-body').append(row);
                     }
                 }
