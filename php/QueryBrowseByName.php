@@ -22,34 +22,25 @@ $limit = (int)$_POST['limit'];
 if ($in_state_tuition == -1) {
     $in_state_tuition_lower = 0;
     $in_state_tuition_upper = 1000000;
-} else if ($out_of_state_tuition == 40) {
-    $in_state_tuition_lower = $in_state_tuition * 1000;
-    $in_state_tuition_upper = 1000000;
 } else {
-    $in_state_tuition_lower = ((double)$in_state_tuition) * 1000;
-    $in_state_tuition_upper = ((double)$in_state_tuition) * 1000 + 10000;
+    $in_state_tuition_lower = 0;
+    $in_state_tuition_upper = ((double)$in_state_tuition) * 1000;
 }
 
 if ($out_of_state_tuition == -1) {
     $out_of_state_tuition_lower = 0;
     $out_of_state_tuition_upper = 1000000;
-} else if ($out_of_state_tuition == 40) {
-    $out_of_state_tuition_lower = $out_of_state_tuition * 1000;
-    $out_of_state_tuition_upper = 1000000;
 } else {
-    $out_of_state_tuition_lower = ((double)$out_of_state_tuition) * 1000;
-    $out_of_state_tuition_upper = ((double)$out_of_state_tuition) * 1000 + 10000;
+    $out_of_state_tuition_lower = 0;
+    $out_of_state_tuition_upper = ((double)$out_of_state_tuition) * 1000;
 }
 
 if ($average_salary == -1) {
     $average_salary_lower = 0;
     $average_salary_upper = 1000000;
-} else if ($average_salary == 50) {
-    $average_salary_lower = $average_salary * 1000;
-    $average_salary_upper = 1000000;
 } else {
     $average_salary_lower = ((double)$average_salary) * 1000;
-    $average_salary_upper = ((double)$average_salary) * 1000 + 10000;
+    $average_salary_upper = 1000000;
 }
 
 if ($limit == -1) {
@@ -63,18 +54,18 @@ if (strcmp($sort_by, "name") != 0 && strcmp($sort_by, "score") != 0 && strcmp($s
 if ($db_connection) {
     if (strcmp($sort_by, "score") == 0 || strcmp($sort_by, "average_salary") == 0) {
         if ($state == -1) {
-            $query = $db_connection->prepare("SELECT s.name, .2 * (1 - 1 / ((s.salary_twentyfive + s.salary_seventyfive) / 2 / ((s.in_state_tuition + s.out_of_state_tuition) / 2)) / 5) + .1 * (1 - 1 / (100000 / ((s.in_state_tuition + s.out_of_state_tuition + 2 * s.average_student_debt) / 4))) + .1 * st.score / 100 + .3 * s.graduation_rate + .3 * s.retention_rate AS 'score', s.city, s.in_state_tuition, s.out_of_state_tuition, (s.salary_twentyfive + s.salary_seventyfive) / 2 AS 'average_salary', st.name AS 'state' FROM schools s, located l, states st WHERE s.in_state_tuition > ? AND s.in_state_tuition < ? AND s.out_of_state_tuition > ? AND s.out_of_state_tuition < ? AND (s.salary_twentyfive + s.salary_seventyfive) / 2 > ? AND (s.salary_twentyfive + s.salary_seventyfive) / 2 < ? AND s.name = l.school AND l.state_code = st.code ORDER BY " . $sort_by . " DESC LIMIT ?;");
+            $query = $db_connection->prepare("SELECT s.name, .2 * (1 - 1 / ((s.salary_twentyfive + s.salary_seventyfive) / 2 / ((s.in_state_tuition + s.out_of_state_tuition) / 2)) / 5) + .1 * (1 - 1 / (100000 / ((s.in_state_tuition + s.out_of_state_tuition + 2 * s.average_student_debt) / 4))) + .1 * st.score / 100 + .3 * s.graduation_rate + .3 * s.retention_rate AS 'score', s.city, s.in_state_tuition, s.out_of_state_tuition, (s.salary_twentyfive + s.salary_seventyfive) / 2 AS 'average_salary', st.name AS 'state' FROM schools s, located l, states st WHERE s.in_state_tuition >= ? AND s.in_state_tuition <= ? AND s.out_of_state_tuition >= ? AND s.out_of_state_tuition <= ? AND (s.salary_twentyfive + s.salary_seventyfive) / 2 >= ? AND (s.salary_twentyfive + s.salary_seventyfive) / 2 <= ? AND s.name = l.school AND l.state_code = st.code ORDER BY " . $sort_by . " DESC LIMIT ?;");
             $query->bind_param("ddddddi", $in_state_tuition_lower, $in_state_tuition_upper, $out_of_state_tuition_lower, $out_of_state_tuition_upper, $average_salary_lower, $average_salary_upper, $limit);
         } else {
-            $query = $db_connection->prepare("SELECT s.name, .2 * (1 - 1 / ((s.salary_twentyfive + s.salary_seventyfive) / 2 / ((s.in_state_tuition + s.out_of_state_tuition) / 2)) / 5) + .1 * (1 - 1 / (100000 / ((s.in_state_tuition + s.out_of_state_tuition + 2 * s.average_student_debt) / 4))) + .1 * st.score / 100 + .3 * s.graduation_rate + .3 * s.retention_rate AS 'score', s.city, s.in_state_tuition, s.out_of_state_tuition, (s.salary_twentyfive + s.salary_seventyfive) / 2 AS 'average_salary', st.name AS 'state' FROM schools s, located l, states st WHERE s.in_state_tuition > ? AND s.in_state_tuition < ? AND s.out_of_state_tuition > ? AND s.out_of_state_tuition < ? AND (s.salary_twentyfive + s.salary_seventyfive) / 2 > ? AND (s.salary_twentyfive + s.salary_seventyfive) / 2 < ? AND s.name = l.school AND l.state_code = st.code AND l.state_code = ? ORDER BY " . $sort_by . " DESC LIMIT ?;");
+            $query = $db_connection->prepare("SELECT s.name, .2 * (1 - 1 / ((s.salary_twentyfive + s.salary_seventyfive) / 2 / ((s.in_state_tuition + s.out_of_state_tuition) / 2)) / 5) + .1 * (1 - 1 / (100000 / ((s.in_state_tuition + s.out_of_state_tuition + 2 * s.average_student_debt) / 4))) + .1 * st.score / 100 + .3 * s.graduation_rate + .3 * s.retention_rate AS 'score', s.city, s.in_state_tuition, s.out_of_state_tuition, (s.salary_twentyfive + s.salary_seventyfive) / 2 AS 'average_salary', st.name AS 'state' FROM schools s, located l, states st WHERE s.in_state_tuition >= ? AND s.in_state_tuition <= ? AND s.out_of_state_tuition >= ? AND s.out_of_state_tuition <= ? AND (s.salary_twentyfive + s.salary_seventyfive) / 2 >= ? AND (s.salary_twentyfive + s.salary_seventyfive) / 2 <= ? AND s.name = l.school AND l.state_code = st.code AND l.state_code = ? ORDER BY " . $sort_by . " DESC LIMIT ?;");
             $query->bind_param("ddddddii", $in_state_tuition_lower, $in_state_tuition_upper, $out_of_state_tuition_lower, $out_of_state_tuition_upper, $average_salary_lower, $average_salary_upper, $state, $limit);
         }
     } else {
         if ($state == -1) {
-            $query = $db_connection->prepare("SELECT s.name, .2 * (1 - 1 / ((s.salary_twentyfive + s.salary_seventyfive) / 2 / ((s.in_state_tuition + s.out_of_state_tuition) / 2)) / 5) + .1 * (1 - 1 / (100000 / ((s.in_state_tuition + s.out_of_state_tuition + 2 * s.average_student_debt) / 4))) + .1 * st.score / 100 + .3 * s.graduation_rate + .3 * s.retention_rate AS 'score', s.city, s.in_state_tuition, s.out_of_state_tuition, (s.salary_twentyfive + s.salary_seventyfive) / 2 AS 'average_salary', st.name AS 'state' FROM schools s, located l, states st WHERE s.in_state_tuition > ? AND s.in_state_tuition < ? AND s.out_of_state_tuition > ? AND s.out_of_state_tuition < ? AND (s.salary_twentyfive + s.salary_seventyfive) / 2 > ? AND (s.salary_twentyfive + s.salary_seventyfive) / 2 < ? AND s.name = l.school AND l.state_code = st.code ORDER BY " . $sort_by . " ASC LIMIT ?;");
+            $query = $db_connection->prepare("SELECT s.name, .2 * (1 - 1 / ((s.salary_twentyfive + s.salary_seventyfive) / 2 / ((s.in_state_tuition + s.out_of_state_tuition) / 2)) / 5) + .1 * (1 - 1 / (100000 / ((s.in_state_tuition + s.out_of_state_tuition + 2 * s.average_student_debt) / 4))) + .1 * st.score / 100 + .3 * s.graduation_rate + .3 * s.retention_rate AS 'score', s.city, s.in_state_tuition, s.out_of_state_tuition, (s.salary_twentyfive + s.salary_seventyfive) / 2 AS 'average_salary', st.name AS 'state' FROM schools s, located l, states st WHERE s.in_state_tuition >= ? AND s.in_state_tuition <= ? AND s.out_of_state_tuition >= ? AND s.out_of_state_tuition <= ? AND (s.salary_twentyfive + s.salary_seventyfive) / 2 >= ? AND (s.salary_twentyfive + s.salary_seventyfive) / 2 <= ? AND s.name = l.school AND l.state_code = st.code ORDER BY " . $sort_by . " ASC LIMIT ?;");
             $query->bind_param("ddddddi", $in_state_tuition_lower, $in_state_tuition_upper, $out_of_state_tuition_lower, $out_of_state_tuition_upper, $average_salary_lower, $average_salary_upper, $limit);
         } else {
-            $query = $db_connection->prepare("SELECT s.name, .2 * (1 - 1 / ((s.salary_twentyfive + s.salary_seventyfive) / 2 / ((s.in_state_tuition + s.out_of_state_tuition) / 2)) / 5) + .1 * (1 - 1 / (100000 / ((s.in_state_tuition + s.out_of_state_tuition + 2 * s.average_student_debt) / 4))) + .1 * st.score / 100 + .3 * s.graduation_rate + .3 * s.retention_rate AS 'score', s.city, s.in_state_tuition, s.out_of_state_tuition, (s.salary_twentyfive + s.salary_seventyfive) / 2 AS 'average_salary', st.name AS 'state' FROM schools s, located l, states st WHERE s.in_state_tuition > ? AND s.in_state_tuition < ? AND s.out_of_state_tuition > ? AND s.out_of_state_tuition < ? AND (s.salary_twentyfive + s.salary_seventyfive) / 2 > ? AND (s.salary_twentyfive + s.salary_seventyfive) / 2 < ? AND s.name = l.school AND l.state_code = st.code AND l.state_code = ? ORDER BY " . $sort_by . " ASC LIMIT ?;");
+            $query = $db_connection->prepare("SELECT s.name, .2 * (1 - 1 / ((s.salary_twentyfive + s.salary_seventyfive) / 2 / ((s.in_state_tuition + s.out_of_state_tuition) / 2)) / 5) + .1 * (1 - 1 / (100000 / ((s.in_state_tuition + s.out_of_state_tuition + 2 * s.average_student_debt) / 4))) + .1 * st.score / 100 + .3 * s.graduation_rate + .3 * s.retention_rate AS 'score', s.city, s.in_state_tuition, s.out_of_state_tuition, (s.salary_twentyfive + s.salary_seventyfive) / 2 AS 'average_salary', st.name AS 'state' FROM schools s, located l, states st WHERE s.in_state_tuition >= ? AND s.in_state_tuition <= ? AND s.out_of_state_tuition >= ? AND s.out_of_state_tuition <= ? AND (s.salary_twentyfive + s.salary_seventyfive) / 2 >= ? AND (s.salary_twentyfive + s.salary_seventyfive) / 2 <= ? AND s.name = l.school AND l.state_code = st.code AND l.state_code = ? ORDER BY " . $sort_by . " ASC LIMIT ?;");
             $query->bind_param("ddddddii", $in_state_tuition_lower, $in_state_tuition_upper, $out_of_state_tuition_lower, $out_of_state_tuition_upper, $average_salary_lower, $average_salary_upper, $state, $limit);
         }
     }
