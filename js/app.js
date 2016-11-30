@@ -22,12 +22,15 @@ app.controller('map-controller', ['$scope', '$routeParams', function($scope, $ro
   	$('.back-button').hide();
   	$('.browse-button').show();
   	$('#map').show();
+    if ($('#browse')) {
+      $('#browse').hide();
+    }
   	if (window.map) {
       google.maps.event.trigger(map, 'resize');
       var name = $routeParams.name;
 	  	if (name) {
 	  		toggleSearchWithoutSelect();
-	  		$('#search').attr('value', name);
+	  		$('.main #search').attr('value', name);
 	  		getSchoolInfo(name);
 	  	}
   	}
@@ -37,6 +40,9 @@ app.controller('browse-controller', ['$scope', '$routeParams', function($scope, 
     $('.back-button').show();
     $('.browse-button').hide();
     $('#map').hide();
+    if ($('#browse')) {
+      $('#browse').show();
+    }
     $('#browse .dropdown-menu a').click(function() {
         $(this).parent().parent().parent().children('.btn').html($(this).html() + " <span class=\"caret\"></span>");
         $(this).parent().parent().parent().children('input').attr('value', $(this).parent().children('input').val());

@@ -122,3 +122,11 @@ function translateLocale(locale) {
 			return locale;
 	}
 }
+
+function scrollInfo() {
+	$('.compare').scrollTop($('.result').scrollTop());
+}
+
+function scrollCompare() {
+	$('.result').scrollTop($('.compare').scrollTop());
+}

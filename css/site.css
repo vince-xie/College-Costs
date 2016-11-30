@@ -12,6 +12,14 @@ body {
     overflow: scroll;
 }
 
+.compare {
+    display: inline;
+}
+
+.compare .info-list {
+    display: none;
+}
+
 #browse a {
     cursor: hand;
 }
@@ -122,6 +130,10 @@ a:hover {
     outline: none;
     border-bottom: 3px solid #ecf0f1;
     padding: 10px 0px 0px 0px;
+}
+
+.compare #search {
+    width: 300px;
 }
 
 .main {
