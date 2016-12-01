@@ -2,12 +2,7 @@
 
 header("Content-type: text/javascript");
 
-$server = "";
-$username = "";
-$password = "";
-$db = "";
-
-$db_connection = new mysqli($server, $username, $password, $db);
+$db_connection = new mysqli($_SERVER['RDS_HOSTNAME'], $_SERVER['RDS_USERNAME'], $_SERVER['RDS_PASSWORD'], $_SERVER['RDS_DB_NAME'], $_SERVER['RDS_PORT']);
 if ($db_connection->connect_error) {
     die("Connection to MySQL database failed.");
 }
