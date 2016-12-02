@@ -12,6 +12,10 @@ body {
     overflow: scroll;
 }
 
+.sort-by a, .sort-by button {
+    font-weight: bold !important;
+}
+
 .compare {
     display: inline;
 }
