@@ -109,7 +109,7 @@ function getSchoolInfo(name) {
             updateColors(".average-debt font", getDecimalColorReverse(school.average_student_debt, averages.average_student_debt));
 
             var info = new google.maps.InfoWindow({
-                content: "Click on me! "
+                content: "<font style=\"font-weight: bold\">" + school.name + "</font><br></br>" + "Click on the marker below for more details! "
             });
             info.open(map,marker);
 
