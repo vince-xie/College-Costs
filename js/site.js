@@ -108,6 +108,11 @@ function getSchoolInfo(name) {
             updatePopover(".average-debt span", getDecimalPopoverMessage(school.average_student_debt, averages.average_student_debt));
             updateColors(".average-debt font", getDecimalColorReverse(school.average_student_debt, averages.average_student_debt));
 
+            var info = new google.maps.InfoWindow({
+                content: "Click on me! "
+            });
+            info.open(map,marker);
+
             google.maps.event.addListener(marker, 'click', function(e) {
                 openInfo(school);
             });
