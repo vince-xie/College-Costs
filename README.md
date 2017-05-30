@@ -14,4 +14,4 @@ Built using:\
 •  Bootstrap, Chart.JS for UI elements\
 •  JQuery animations\
 •  Google Maps API\
-•  AJAX requests to PHP backend which communicates with MySQL database\
+•  AJAX requests to PHP backend which communicates with MySQL database
